@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom";
-import React, { Component } from "react";
+import React from "react";
+//import React, { Component } from "react";
 import Axios from "axios";
 //import React from 'react';
 import LocationMeteo from './locationMeteo.js';
@@ -10,6 +11,8 @@ const api_key = "6a899154a031cb42971d850ed003d5a9";
 const api_url = "https://api.openweathermap.org/data/2.5/weather";
 const API_URL_ICON = "http://openweathermap.org/img/wn/";
 //const API_URL3Days = "https://api.openweathermap.org/data/2.5/forecast/daily";
+
+//https://api.openweathermap.org/data/2.5/weather?q=paris&appid=6a899154a031cb42971d850ed003d5a9
 
 
 
@@ -22,9 +25,6 @@ class Meteo extends React.Component {
     regionInput: ""
   }
 
-  
-
-
   changeRegion = (value) => {
     this.setState({ regionInput: value })
   }
@@ -33,7 +33,10 @@ class Meteo extends React.Component {
 
     e.preventDefault()
 
-    Axios.get(`${api_url}?q=${this.state.regionInput}&appid=${api_key}`).then(res => {
+    Axios.get(`${api_url}?q=${this.state.regionInput}&appid=${api_key}`)
+    .then(res => {
+
+      console.log(res);
 
       let userWeather = {
         temperature: res.data.main.temp,
@@ -108,6 +111,8 @@ class Meteo extends React.Component {
                 <form className="region" onSubmit={(e) => { this.changeLocationNewAPI(e) }}>
                   <input type="text" className="regioninput" placeholder="Select your region" onChange={(e) => { this.changeRegion(e.target.value) }} />
                 </form>
+                <h1>{this.state.weather.nomCity}</h1>
+                <h1>{this.state.weather.nomCity}</h1>
 
                 <LocationMeteo weather={this.state.weather} />   
         </div>

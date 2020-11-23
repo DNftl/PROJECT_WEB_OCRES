@@ -145,7 +145,10 @@ class Match extends React.Component {
   {
     return (
       <div className="App">
+        <br/>
         <div className="container">
+        <div className="borderWidg">
+        
 
           <h1>Match Widget</h1>
 
@@ -154,7 +157,7 @@ class Match extends React.Component {
                 </form>
                 <h1>{this.state.Infos.nomPays}</h1>
                 <h1>{this.state.Infos.nomVille}</h1>
-
+        </div>
         </div>
       </div>
     );

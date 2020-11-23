@@ -9,10 +9,13 @@ import LocationMeteo from './locationMeteo.js';
 
 const api_key = "6a899154a031cb42971d850ed003d5a9";
 const api_url = "https://api.openweathermap.org/data/2.5/weather";
-const API_URL_ICON = "http://openweathermap.org/img/wn/";
-//const API_URL3Days = "https://api.openweathermap.org/data/2.5/forecast/daily";
+
 
 //https://api.openweathermap.org/data/2.5/weather?q=paris&appid=6a899154a031cb42971d850ed003d5a9
+
+
+
+//http://api.weatherstack.com/current?access_key=79b7f4046fe000ff33873b0824b2a65f&query=New%20York
 
 
 
@@ -22,7 +25,8 @@ class Meteo extends React.Component {
   state = {
 
     weather: {},
-    regionInput: ""
+    regionInput: "",
+    logo:{}
   }
 
   changeRegion = (value) => {
@@ -41,7 +45,7 @@ class Meteo extends React.Component {
       let userWeather = {
         temperature: res.data.main.temp,
         description: res.data.weather[0].description,
-        image: res.data.weather.icon,
+        //image: this.getHTMLElementFromimageIcon(res.data.weather[0].icon),    // res.data.weather.icon,   //getHTMLElementFromIcon(data.weather[0].icon);
         pression: res.data.main.pressure,
         humidity : res.data.main.humidity,
         windSpeed: res.data.wind.speed,
@@ -60,61 +64,42 @@ class Meteo extends React.Component {
 
   }
 
-  getHTMLElementFromimageIcon(icon){
-    return `<img src=${API_URL_ICON}${icon}@2x.png class="weather-icon"/>`
-  }
-
-
-  /*changeLocationNewAPI3jours = (e) => {
+  findLogoMeteo = (e) => {
 
     e.preventDefault()
 
-    Axios.get(`${API_URL3Days}?q=${this.state.regionInput}&cnt=3&units=metric&appid=${api_key}`,{
-        crossdomain: true
-      }).then(res => {
+    Axios.get(`http://api.weatherstack.com/current?access_key=79b7f4046fe000ff33873b0824b2a65f&query=${this.state.regionInput}`)
+    .then(res => {
 
+      console.log(res);
 
-      //const dataa = res.data.list;
-
-      let userWeather = {
-
-        //temperatureToday: dataa[0].temp.day,
-       //temperatureTomorrow: dataa[1].temp.day,
-        //temperatureNextdays: dataa[2].temp.day,
-
-        temperatureToday: res.data.list.temp.day,
-        //temperatureTomorrow: res.data.list.temp.day,
-        //temperatureNextdays: res.data.list.temp.day,
-
-        
-        description: res.data.weather[0].description
-        //location: res.data.location.name,
-        //region: res.data.location.region,
-        //country: res.data.location.country,
+      let newvar = {
+        image : res.data.current.weather_icons
       }
 
-      this.setState({ weather: userWeather });
+      this.setState({ logo: newvar });
 
     })
-  }*/
 
+  }
 
-
+  
   render() 
   {
     return (
       <div className="App">
         <div className="container">
-
-          <h1>Weather Widget</h1>
+        <br/>
+        <div className="borderWidg">
+          <h1 className="textwidgetcenter">Weather Widget</h1>
 
                 <form className="region" onSubmit={(e) => { this.changeLocationNewAPI(e) }}>
-                  <input type="text" className="regioninput" placeholder="Select your region" onChange={(e) => { this.changeRegion(e.target.value) }} />
+                  <input type="text" className="textwidgetcenter" placeholder="Select your region" onChange={(e) => { this.changeRegion(e.target.value) }} />
                 </form>
-                <h1>{this.state.weather.nomCity}</h1>
-                <h1>{this.state.weather.nomCity}</h1>
+                
 
                 <LocationMeteo weather={this.state.weather} />   
+              </div>
         </div>
       </div>
     );

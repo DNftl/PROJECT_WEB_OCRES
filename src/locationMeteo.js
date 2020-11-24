@@ -26,36 +26,36 @@ export default function LocationMeteo(props) {
             </div>
 
             <div className="row">
-                <div className="col-md-6 weather-info">
+                <div className="col-md-sm-xs-6 weather-info">
                     <p><b>Temp max : </b></p>
                     <p>{tempMax}</p>
                 </div>
 
-                <div className="col-md-6 weather-info">
+                <div className="col-md-sm-xs-6 weather-info">
                     <p><b>Temp min</b></p>
                     <p>{tempMin}</p>
                 </div>
             </div>
 
             <div className="row">
-                <div className="col-md-6 weather-info">
+                <div className="col-md-sm-xs-6 weather-info">
                     <p><b>Wind Speed</b>(km/hr)</p>
                     <p>{windSpeed}</p>
                 </div>
 
-                <div className="col-md-6 weather-info">
+                <div className="col-md-sm-xs-6 weather-info">
                     <p><b>Preassure</b>(millibar)</p>
                     <p>{pression}</p>
                 </div>
             </div>
 
             <div className="row">
-               <div className="col-md-6 weather-info">
+               <div className="col-md-sm-xs-6 weather-info">
                     <p><b>Precipitation</b>(mm)</p>
                     <p>{nuagePourcentage}</p>
                 </div>
 
-                <div className="col-md-6 weather-info">
+                <div className="col-md-sm-xs-6 weather-info">
                     <p><b>Humidity</b>(%)</p>
                     <p>{humidity}</p>
                 </div>

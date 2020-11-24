@@ -100,6 +100,8 @@ class Meteo extends React.Component {
                   <input type="text" className="textwidgetcenter" placeholder="Enter your region" onChange={(e) => { this.changeRegion(e.target.value) }} />
                 </div>
                 </form>
+
+                <p>{this.state.weather.pression}</p>
                 
 
                 <LocationMeteo weather={this.state.weather} />   

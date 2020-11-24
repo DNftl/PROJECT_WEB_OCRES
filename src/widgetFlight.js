@@ -27,8 +27,11 @@ class Flight extends React.Component {
 
     e.preventDefault()
 
-    Axios.get(`https://USERNAME:PASSWORD@opensky-network.org/api/flights/departure?airport=EDDF&begin=1517227200&end=1517230800`).then(res => {
+    Axios.get(`https://USERNAME:PASSWORD@opensky-network.org/api/flights/departure?airport=EDDF&begin=1517227200&end=1517230800`)
+    .then(res => {
 
+      console.log(res);
+      
       let userFlight = {
           aeroport : res.data.icao24,
           terminal : res.data.startTime
@@ -38,6 +41,7 @@ class Flight extends React.Component {
       this.setState({ flight: userFlight });
 
     })
+     
 
   }
 

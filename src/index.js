@@ -14,8 +14,5 @@ import infoFlight from './infoFlight.js';
 import widgetResultsMatch from './widgetResultsMatch.js';
 import infoMatch from './infoMatch.js';
 
-
-
-
-
-
+import widgetGraphLine from './widgetGraphLine.js';
+import widgetGraphPie from './widgetGraphPie.js';

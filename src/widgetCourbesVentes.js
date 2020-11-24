@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 
 import React, { PureComponent } from 'react';
 import {
@@ -59,6 +59,7 @@ const data = [
 }
 
 export default Sells;
-
+/*
 const rootElement4= document.getElementById("root4");
 ReactDOM.render(<Sells/>, rootElement4);
+*/

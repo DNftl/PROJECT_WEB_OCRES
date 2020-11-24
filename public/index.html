@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -9,41 +10,92 @@
       name="description"
       content="Web site created using create-react-app"
     />
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
     type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css"/>
    
-    <title>Widget</title>
+    <title>Dashboard</title>
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div>
+    
       <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-             
-              <div id="root1"></div>
-              
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-              <div id="root2"></div>
-             
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-              
-             
-                <div id="root3"></div>
-                <div><br/><br/><br/><br/></div>
-                <div id="root4"></div>
 
-            
-
+        <!-- BANDEAU D'ACCUEUIL -->
+        <header>
+          <div class="wrapper">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h2> </br> DASHBOARD - VOYAGE </br> </br> </h2>
+              </div>
             </div>
           </div>
+        </header>
+
+
+        <div class="row">
+
+          <!-- COLONNE DE GAUCHE -->
+          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="background-color:lavender;">
+            <aside>
+                <div class="d-none d-xl-block">
+                    
+                    <h6>Liste de destinations</h6>
+                    <nav class="browse">
+                        <ul class="main">
+                            <li><a class="heavy" href="#">London</a></li>
+                            <li><a class="recent" href="#">Hong-Kong</a></li>
+                            <li><a class="top" href="#">Brasilia</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+          </div>
+
+          <!-- TABLEAU DE BORD PRINCIPAL -->
+          <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 col-xl-11" style="background-image:linear-gradient(to right, #AA076B,#61045F);">
+                <div class="row">
+
+                  <!-- WIDGET MATCH -->
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                      <div id="root1"></div>
+                    </div>
+
+                    <!-- WIDGET FLIGHT -->
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                      <div id="root2"></div>
+                    </div>
+
+                    <!-- WIDGET METEO -->
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div id="root3"></div>
+                        <br /> <br />
+                    </div>
+                </div>
+
+                <div class="row" style="background-image:linear-gradient(to right, #AA076B,#61045F);">
+                    <!-- WIDGET GRAPHLINE -->
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <div id="root4"></div>
+                    </div>
+
+                    <!-- WIDGET GRAPHPIE -->
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <div id="root5"></div>
+                    </div>
+                </div>
+            
+          </div>
+
+        </div>
+
       </div>
-    </div>
     
   </body>
 </html>

@@ -9,37 +9,37 @@ export default function InfoPays(props) {
         
         <div className="user-weather">
             <div className="row">
-                <div className="col-md-6 weather-temp">
+                <div className="col-md-sm-xs-6 weather-temp">
                     <p>{nom}, {alphcode}</p>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-sm-xs-6">
                     <p>{drapeau}</p>
                 </div>
             </div>
 
             <div className="row">
-                <div className="col-md-6 weather-info">   
+                <div className="col-md-sm-xs-6 weather-info">   
                     <p>Capitale : {capitale}</p>
                 </div>
-                <div className="col-md-6 weather-info">
+                <div className="col-md-sm-xs-6 weather-info">
                     <p>Continent : {region}</p>
                 </div>
             </div>
 
             <div className="row">   
-                <div className="col-md-6 weather-info">
+                <div className="col-md-sm-xs-6 weather-info">
                     <p>Population : {pop}</p>
                 </div>
-                <div className="col-md-6 weather-info">
+                <div className="col-md-sm-xs-6 weather-info">
                     <p>Republic : {republic}</p>
                 </div>
             </div>
 
             <div className="row">   
-                <div className="col-md-6 weather-info">
+                <div className="col-md-sm-xs-6 weather-info">
                     <p>Devise : {currname}</p>
                 </div>
-                <div className="col-md-6 weather-info">
+                <div className="col-md-sm-xs-6 weather-info">
                     <p>Symbole : {currsymb}</p>
                 </div>
 

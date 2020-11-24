@@ -6,53 +6,62 @@ export default function LocationMeteo(props) {
     const {temperature, description, image, pression, humidity, windSpeed,country, tempMax, tempMin, nuagePourcentage, timeSunrise, nomCity, paramInter} = props.weather;
 
     return (
-        <div className="user-weather">
+        <div className="determ">
             <div className="row">
-                <div className="col-md-3 weather-temp">
-                    <h1>{temperature}<sup>o</sup>C , {description}</h1>
-                    <h4>{nomCity}</h4>
-                    <p>{paramInter} {country}</p>
+                <div className="col-md-sm-xs-12">
+                
+                <br/> <br/>
+                    <p>Temperature :</p><h3>{temperature}<sup>o</sup>C</h3>
+                    <br/>
+                    <p>Description : {description}</p>
+                    <br/>
+                    <p>{nomCity}, {country}</p>
+                    <br/>
                 </div>
 
-                <div className="col-md-9">
+                <div className="col-md-sm-xs-0">
+                    <br/>
                     <img className="mainImg" src={image} alt="img" />
                 </div>
             </div>
 
             <div className="row">
-                <div className="col-md-3 weather-info">
-                    <p><b>Wind Speed</b>(km/hr)</p>
-                    <h2>{windSpeed}</h2>
+                <div className="col-md-6 weather-info">
+                    <p><b>Temp max : </b></p>
+                    <p>{tempMax}</p>
                 </div>
 
-                <div className="col-md-3 weather-info">
-                    <p><b>Preassure</b>(millibar)</p>
-                    <h2>{pression}</h2>
+                <div className="col-md-6 weather-info">
+                    <p><b>Temp min</b></p>
+                    <p>{tempMin}</p>
                 </div>
-
-                <div className="col-md-3 weather-info">
-                    <p><b>Precipitation</b>(mm)</p>
-                    <h2>{nuagePourcentage}</h2>
-                </div>
-
-                <div className="col-md-3 weather-info">
-                    <p><b>Humidity</b>(%)</p>
-                    <h2>{humidity}</h2>
-                </div>
-
             </div>
+
             <div className="row">
                 <div className="col-md-6 weather-info">
-                    <p><b>temperature max : </b></p>
-                    <h2>{tempMax}</h2>
+                    <p><b>Wind Speed</b>(km/hr)</p>
+                    <p>{windSpeed}</p>
                 </div>
 
                 <div className="col-md-6 weather-info">
-                    <p><b>temperature min</b></p>
-                    <h2>{tempMin}</h2>
+                    <p><b>Preassure</b>(millibar)</p>
+                    <p>{pression}</p>
+                </div>
+            </div>
+
+            <div className="row">
+               <div className="col-md-6 weather-info">
+                    <p><b>Precipitation</b>(mm)</p>
+                    <p>{nuagePourcentage}</p>
                 </div>
 
+                <div className="col-md-6 weather-info">
+                    <p><b>Humidity</b>(%)</p>
+                    <p>{humidity}</p>
+                </div>
             </div>
+
+           
         </div>
     )
 }

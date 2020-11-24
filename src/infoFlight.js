@@ -6,6 +6,7 @@ export default function InfoFLight(props) {
     const {aeroport, terminal} = props.flight;
 
     return (
+        
         <div className="user-weather">
             <div className="row">
                 <div className="col-md-3 weather-temp">

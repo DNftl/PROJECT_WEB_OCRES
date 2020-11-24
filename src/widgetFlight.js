@@ -45,7 +45,9 @@ class Flight extends React.Component {
   {
     return (
       <div className="App">
+                <br/>
         <div className="container">
+        <div className="borderWidg">
 
           <h1>Info Flight :</h1>
 
@@ -55,6 +57,7 @@ class Flight extends React.Component {
                   </form>
 
                 <InfoFLight flight={this.state.flight} />   
+          </div>
         </div>
       </div>
     );

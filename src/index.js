@@ -14,8 +14,6 @@ import infoPays from './infoPays.js';
 import widgetResultsMatch from './widgetResultsMatch.js';
 import infoMatch from './infoMatch.js';
 
-import widgetCourbesVentes from './widgetCourbesVentes.js';
-
 import Boutton from './App.js';
 
 import widgetGraphLine from './widgetGraphLine.js';

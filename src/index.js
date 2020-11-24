@@ -8,8 +8,8 @@ import reportWebVitals from './reportWebVitals';
 import widgetMeteo from "./widgetMeteo";
 import locationMeteo from './locationMeteo.js';
 
-import widgetFlight from './widgetFlight.js';
-import infoFlight from './infoFlight.js';
+import widgetPays from './widgetPays.js';
+import infoPays from './infoPays.js';
 
 import widgetResultsMatch from './widgetResultsMatch.js';
 import infoMatch from './infoMatch.js';

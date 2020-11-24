@@ -101,7 +101,7 @@ class Meteo extends React.Component {
                 </div>
                 </form>
 
-                <p>{this.state.weather.pression}</p>
+                <p>{this.state.weather.temperature}</p>
                 
 
                 <LocationMeteo weather={this.state.weather} />   

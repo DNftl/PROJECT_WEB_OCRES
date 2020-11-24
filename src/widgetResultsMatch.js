@@ -4,70 +4,9 @@ import Axios from "axios";
 import InfoMatch from './infoMatch.js';
 
 const api_key = "523458a0b3a59fb1523e0b735b07893ae95ccae40042bafcc814df82891bcad9";
-const api_url = "https://apiv2.apifootball.com/?action=get_events&from=2019-04-01&to=2019-04-01";
+const api_url = "https://apiv2.apifootball.com/?action=get_events";
 
-//https://apiv2.apifootball.com/?action=get_events&from=2019-04-01&to=2019-04-01&league_id=148&APIkey=523458a0b3a59fb1523e0b735b07893ae95ccae40042bafcc814df82891bcad9
-
-
-/*
-class Match extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      Infos : []
-    };
-  }
-  getUsersData() 
-  {
-    axios
-      .get('https://apiv2.apifootball.com/?action=get_events&from=2019-04-01&to=2019-04-03&league_id=148&APIkey=523458a0b3a59fb1523e0b735b07893ae95ccae40042bafcc814df82891bcad9')
-      .then(res => {
-        console.log(res);
-      })
-      .then(res => {
-        const data = res.data
-        console.log(data)
-        const infos = data.map(u =>
-          <div>
-          <p>{u.country_name}</p>
-          <p>{u.country_id}</p>
-          </div>
-          )
-          this.setState({
-            infos
-        })
-      })
-      .catch((error) => {
-          console.log(error)
-      })
-      
-  }
-
-  componentDidMount(){
-    this.getUsersData()
-}
-
-  render() 
-  {
-    return (
-      <div className="App">
-      
-        
-    <p>{this.state.infos}</p>
-        <p>heyyyy</p>
-      </div>
-    );
-  }
-}
-
-export default Match;*/
-
-//////////////////////////////////////////////////////////////
-//https://apiv2.apifootball.com/?action=get_events&from=2019-04-01&to=2019-04-01&league_id=${this.state.NumeroDeLigue}&APIkey=${api_key}
-
-
+//https://apiv2.apifootball.com/?action=get_events&from=2019-04-01&to=2019-04-01&APIkey=523458a0b3a59fb1523e0b735b07893ae95ccae40042bafcc814df82891bcad9&match_date=2019-04-01&country_id=41
 
 class Match extends React.Component {
 
@@ -87,14 +26,41 @@ class Match extends React.Component {
 
     e.preventDefault()
 
-    Axios.get(`${api_url}&league_id=${this.state.NumeroDeLigue}&APIkey=${api_key}`)
+    Axios.get(`${api_url}&from=${this.state.NumeroDeLigue}&to=2020-12-08&APIkey=${api_key}&match_date=2020-11-15&country_id=41`)         
     .then(res => {
-
+     // https://apiv2.apifootball.com/?action=get_events&from=2020-11-17&to=2020-12-08&APIkey=523458a0b3a59fb1523e0b735b07893ae95ccae40042bafcc814df82891bcad9&match_date=2020-11-15&country_id=41
       console.log(res);
 
       let NewInfos = {
-        nomPays: res.data.country_name,
-        nomLeague : res.data.league_name
+        dateMatch: res.data[0].match_date,
+        
+        nomLigue1: res.data[0].league_name,
+        nomEquipeHome1: res.data[0].match_hometeam_name,
+        nomEquipeExt1: res.data[0].match_awayteam_name,
+        scoreEquipeExt1: res.data[0].match_awayteam_score,
+        scoreEquipeHome1: res.data[0].match_hometeam_score,
+        systemAway: res.data[0].match_awayteam_system,
+        systemHome: res.data[0].match_hometeam_system, 
+        statPossAway: res.data[0].statistics[0].away, 
+        statPossHome: res.data[0].statistics[0].home
+
+
+
+        /*nomEquipeHome2: res.data[1].match_hometeam_name,
+        nomEquipeExt2: res.data[1].match_awayteam_name,
+        nomLigue2: res.data[1].league_name,
+        scoreEquipeExt2: res.data[1].match_awayteam_ft_score,
+        scoreEquipeHome2: res.data[1].match_hometeam_ft_score,*/
+
+        /*
+        buteur1: res.data[0].goalscorer[0].home_scorer,
+        buteur11: res.data[0].goalscorer[1].home_scorer,
+        
+
+        buteur2: res.data[1].goalscorer[0].home_scorer,
+        buteur22: res.data[1].goalscorer[1].home_scorer,*/
+        
+
       }
 
       this.setState({ Infos: NewInfos });
@@ -117,8 +83,8 @@ class Match extends React.Component {
                 <form className="region" onSubmit={(e) => { this.updateInfos(e) }}>
                   <input type="text" className="" placeholder="Select your country" onChange={(e) => { this.changeCountry(e.target.value) }} />
                 </form>
-                <h1>{this.state.Infos.nomPays}</h1>
-                <h1>{this.state.Infos.nomLeague}</h1>
+                <br/>
+               <InfoMatch pc={this.state.Infos} />
         </div>
         </div>
       </div>

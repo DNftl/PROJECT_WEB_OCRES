@@ -19,6 +19,9 @@ import Boutton from './App.js';
 import widgetGraphLine from './widgetGraphLine.js';
 import widgetGraphPie from './widgetGraphPie.js';
 
+import widgetJournal from './widgetJournal.js';
+import infoJournal from './infoJournal.js';
+
 
 
 

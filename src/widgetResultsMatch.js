@@ -12,7 +12,6 @@ class Match extends React.Component {
 
   //state
   state = {
-
     Infos: {},
     NumeroDeLigue: ""
   }
@@ -81,7 +80,7 @@ class Match extends React.Component {
           <h1>Match Widget</h1>
 
                 <form className="region" onSubmit={(e) => { this.updateInfos(e) }}>
-                  <input type="text" className="" placeholder="Choose a date" onChange={(e) => { this.changeCountry(e.target.value) }} />
+                  <input type="text" className="" placeholder="Enter a date ex : 2020-11-22" onChange={(e) => { this.changeCountry(e.target.value) }} />
                 </form>
                 <br/>
                <InfoMatch pc={this.state.Infos} />

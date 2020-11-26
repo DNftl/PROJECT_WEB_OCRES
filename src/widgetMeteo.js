@@ -17,9 +17,6 @@ const api_url = "https://api.openweathermap.org/data/2.5/weather";
 //http://api.weatherstack.com/current?access_key=79b7f4046fe000ff33873b0824b2a65f&query=New%20York
 
 
-
-
-
 class Meteo extends React.Component {
 
   //state

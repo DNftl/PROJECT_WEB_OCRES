@@ -41,8 +41,6 @@ class Flight extends React.Component {
       this.setState({ flight: userFlight });
 
     })
-     
-
   }
 
   render() 

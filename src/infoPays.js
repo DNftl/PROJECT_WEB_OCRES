@@ -1,5 +1,5 @@
 import React from 'react';
-//import "./index.css";
+import "./index.css";
 
 export default function InfoPays(props) {
     
@@ -8,6 +8,10 @@ export default function InfoPays(props) {
     return (
         
         <div className="user-weather">
+
+            <div>
+            <p><img className="imageFlag" src={drapeau}></img></p>
+            </div>
             <div className="row">
                 <div className="col-md-sm-xs-6 weather-temp">
                     <p>{nom}, {alphcode}</p>

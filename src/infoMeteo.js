@@ -1,9 +1,9 @@
 import React from 'react';
 import "./index.css";
 
-export default function LocationMeteo(props) {
+export default function InfoMeteo(props) {
     
-    const {temperature, description, image, pression, humidity, windSpeed,country, tempMax, tempMin, nuagePourcentage, timeSunrise, nomCity, paramInter} = props.weather;
+    const {temperature, description, image, pression, humidity, windSpeed,country, tempMax, tempMin, nuagePourcentage, timeSunrise, nomCity, paramInter, icon} = props.weather;
 
     return (
         <div className="determ">
@@ -21,7 +21,7 @@ export default function LocationMeteo(props) {
 
                 <div className="col-md-sm-xs-0">
                     <br/>
-                    <img className="mainImg" src={image} alt="img" />
+                    <p><img className="imageIconMeteo" src={icon}></img></p>
                 </div>
             </div>
 

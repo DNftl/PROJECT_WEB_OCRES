@@ -9,7 +9,7 @@ const api_key = "d1b0413e0c2796035b1690b30fd92d029";
 //https://api.aviationstack.com/v1/Orly?access_key=1b0413e0c2796035b1690b30fd92d029
 
 
-//https://restcountries.eu/rest/v2/name/${this.state.countryInput}?fullText=true
+//https://restcountries.eu/rest/v2/name/france?fullText=true
 
 class Pays extends React.Component {
 

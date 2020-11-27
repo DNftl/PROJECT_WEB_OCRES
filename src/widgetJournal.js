@@ -5,7 +5,7 @@ import InfoJournal from './infoJournal.js';
 
 const api_key = "dbc63e97842c4cb5bbb0bae315c289f4";
 const api_url = "http://newsapi.org/v2/everything?q=apple";
-//http://newsapi.org/v2/everything?q=apple&from=2020-11-24&to=2020-11-24&sortBy=popularity&apiKey=dbc63e97842c4cb5bbb0bae315c289f4
+//http://newsapi.org/v2/everything?q=apple&from=2020-11-25&to=2020-12-04&sortBy=popularity&apiKey=dbc63e97842c4cb5bbb0bae315c289f4
 
 class Journal extends React.Component {
 
@@ -51,6 +51,41 @@ class Journal extends React.Component {
     })
   }
 
+
+
+
+
+  autresArticles = (e) => {
+
+    e.preventDefault()
+
+    Axios.get(`${api_url}&from=2020-11-25&to=2020-12-04&sortBy=popularity&apiKey=${api_key}`)
+    .then(res => {
+
+      console.log(res);
+
+      let loadData = {
+
+        art1Content: res.data.articles[1].content, 
+        art1Source: res.data.articles[1].source.name,
+        art1Title: res.data.articles[1].title,
+        art1Image: res.data.articles[1].urlToImage, 
+        art1Date: res.data.articles[1].publishedAt, 
+        art1Description: res.data.articles[1].description,
+
+        art2Content: res.data.articles[2].content, 
+        art2Source: res.data.articles[2].source.name,
+        art2Title: res.data.articles[2].title,
+        art2Image: res.data.articles[2].urlToImage, 
+        art2Date: res.data.articles[2].publishedAt, 
+        art2Description: res.data.articles[2].description
+      }
+
+      this.setState({ dataJ: loadData });
+
+    })
+  }
+
   
 
 
@@ -71,8 +106,10 @@ class Journal extends React.Component {
                 </form>
                 <br/><br/>
                 
-                <InfoJournal inf={this.state.dataJ} />   
+                <InfoJournal inf={this.state.dataJ} />  
+                <button id="city-input-button" type="submit" onClick={(e) => { this.autresArticles(e) }}>Autres</button>
               </div>
+              <br/>
         </div>
       </div>
     );

@@ -58,24 +58,29 @@ constructor(props){
         statPossHome: res.data[0].statistics[0].home, 
 
         logoHome: res.data[0].team_home_badge,
-        logoAway: res.data[0].team_away_badge
+        logoAway: res.data[0].team_away_badge,
 
 
-
-        /*nomEquipeHome2: res.data[1].match_hometeam_name,
+        /*
+        nomEquipeHome2: res.data[1].match_hometeam_name,
         nomEquipeExt2: res.data[1].match_awayteam_name,
         nomLigue2: res.data[1].league_name,
         scoreEquipeExt2: res.data[1].match_awayteam_ft_score,
-        scoreEquipeHome2: res.data[1].match_hometeam_ft_score,*/
+        scoreEquipeHome2: res.data[1].match_hometeam_ft_score,
+        */
 
         /*
         buteur1: res.data[0].goalscorer[0].home_scorer,
         buteur11: res.data[0].goalscorer[1].home_scorer,
         
-
         buteur2: res.data[1].goalscorer[0].home_scorer,
-        buteur22: res.data[1].goalscorer[1].home_scorer,*/
+        buteur22: res.data[1].goalscorer[1].home_scorer,
+        */
+
         
+
+
+
 
       }
 
@@ -95,10 +100,11 @@ constructor(props){
         <div className="borderWidg">
         
 
-          <h1>Match Widget</h1>
+          <h1 className="textwidgetcenter3">Match Widget</h1>
+          <br/>
 
                 <form className="region" onSubmit={(e) => { this.updateInfos(e) }}>
-                  <input type="text" className="" placeholder="Enter a date ex : 2020-11-20" onChange={(e) => { this.changeDate(e.target.value) }} />
+                  <input type="text" className="textwidgetcenter" placeholder="Enter a date ex : 2020-11-20" onChange={(e) => { this.changeDate(e.target.value) }} />
                 </form>
       
               <br/>

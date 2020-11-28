@@ -1,10 +1,10 @@
 import React from 'react';
-import './Button/Button.css';
+import './Button.css';
 
 
 function Button({ children, ...rest }) {
     return (
-        <button id="monButton" {...rest}>Rentrer mes données
+        <button id="monButton" {...rest}>Formulaire
             {children}
         </button>
     );

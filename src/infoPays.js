@@ -12,39 +12,40 @@ export default function InfoPays(props) {
             <div>
             <p><img className="imageFlag" src={drapeau}></img></p>
             </div>
+            
             <div className="row">
                 <div className="col-md-sm-xs-6 weather-temp">
                     <p>{nom}, {alphcode}</p>
                 </div>
-                <div className="col-md-sm-xs-6">
+                <div className="col-md-sm-xs-6" >
                     <p>{drapeau}</p>
                 </div>
             </div>
 
             <div className="row">
                 <div className="col-md-sm-xs-6 weather-info">   
-                    <p>Capitale : {capitale}</p>
+                    <p>Capital city: {capitale}<br /></p>
                 </div>
                 <div className="col-md-sm-xs-6 weather-info">
-                    <p>Continent : {region}</p>
-                </div>
-            </div>
-
-            <div className="row">   
-                <div className="col-md-sm-xs-6 weather-info">
-                    <p>Population : {pop}</p>
-                </div>
-                <div className="col-md-sm-xs-6 weather-info">
-                    <p>Republic : {republic}</p>
+                    <p>Continent: {region}</p>
                 </div>
             </div>
 
             <div className="row">   
                 <div className="col-md-sm-xs-6 weather-info">
-                    <p>Devise : {currname}</p>
+                    <p>Population: {pop}</p>
                 </div>
                 <div className="col-md-sm-xs-6 weather-info">
-                    <p>Symbole : {currsymb}</p>
+                    <p>Republic: {republic}</p>
+                </div>
+            </div>
+
+            <div className="row">   
+                <div className="col-md-sm-xs-6 weather-info">
+                    <p>Currency: {currname}</p>
+                </div>
+                <div className="col-md-sm-xs-6 weather-info">
+                    <p>Symbole: {currsymb}</p>
                 </div>
 
             </div>

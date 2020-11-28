@@ -18,14 +18,11 @@ const api_url_icon = "http://openweathermap.org/img/wn/";
 //http://api.weatherstack.com/current?access_key=79b7f4046fe000ff33873b0824b2a65f&query=New%20York
 
 
-<<<<<<< HEAD
-=======
 
 //http://openweathermap.org/img/wn/10d@2x.png
 
 
 
->>>>>>> e2fd92b03f55a8d0b6e0ce9a4ba7b6f827b34315
 class Meteo extends React.Component {
 
   //state
@@ -62,7 +59,7 @@ class Meteo extends React.Component {
         timeSunrise : res.data.sys.sunrise,
         nomCity : res.data.name,
         paramInter : res.data.cod, 
-        icon : res.data.weather[0].icon
+        icon : res.data.weather.icon
       }
 
       this.setState({ weather: userWeather });
@@ -101,10 +98,6 @@ class Meteo extends React.Component {
     })
   }*/
 
-
-
-
-
   render() 
   {
     return (
@@ -113,11 +106,12 @@ class Meteo extends React.Component {
         <div className="container">
         
         <div className="borderWidg">
-          <h1 className="textwidgetcenter">Weather Widget</h1>
+          <h1 className="textwidgetcenter3">Weather Widget</h1>
+          <br/>
 
                 <form className="region" onSubmit={(e) => { this.changeLocationNewAPI(e) }}>
                 <div class="d-flex justify-content-center">
-                  <input type="text" className="textwidgetcenter" placeholder="Enter your region" onChange={(e) => { this.changeRegion(e.target.value) }} />
+                  <input type="text" className="textwidgetcenter" placeholder="Enter your city" onChange={(e) => { this.changeRegion(e.target.value) }} />
                 </div>
                 </form>
 

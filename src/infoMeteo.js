@@ -11,11 +11,11 @@ export default function InfoMeteo(props) {
                 <div className="col-md-sm-xs-12">
                 
                 <br/> <br/>
-                    <p>Temperature :</p><h3>{temperature}<sup>o</sup>C</h3>
+                    <p>Temperature:</p><h3>{temperature}<sup>o</sup>C</h3>
                     <br/>
-                    <p>Description : {description}</p>
+                    <p>Description: {description}</p>
                     <br/>
-                    <p>{nomCity}, {country}</p>
+                    <p>City searched and its country: {nomCity}, {country}</p>
                     <br/>
                 </div>
 
@@ -27,37 +27,31 @@ export default function InfoMeteo(props) {
 
             <div className="row">
                 <div className="col-md-sm-xs-6 weather-info">
-                    <p><b>Temp max : </b></p>
-                    <p>{tempMax}</p>
+                    <p><b>Temp max: </b> {tempMax}</p>
                 </div>
 
                 <div className="col-md-sm-xs-6 weather-info">
-                    <p><b>Temp min</b></p>
-                    <p>{tempMin}</p>
+                    <p><b>Temp min:</b> {tempMin}</p>
                 </div>
             </div>
 
             <div className="row">
                 <div className="col-md-sm-xs-6 weather-info">
-                    <p><b>Wind Speed</b>(km/hr)</p>
-                    <p>{windSpeed}</p>
+                    <p><b>Wind Speed</b>(km/hr) {windSpeed}:</p>
                 </div>
 
                 <div className="col-md-sm-xs-6 weather-info">
-                    <p><b>Preassure</b>(millibar)</p>
-                    <p>{pression}</p>
+                    <p><b>Preassure</b> (millibar): {pression}</p>
                 </div>
             </div>
 
             <div className="row">
                <div className="col-md-sm-xs-6 weather-info">
-                    <p><b>Precipitation</b>(mm)</p>
-                    <p>{nuagePourcentage}</p>
+                    <p><b>Precipitation</b> (mm): {nuagePourcentage}</p>
                 </div>
 
                 <div className="col-md-sm-xs-6 weather-info">
-                    <p><b>Humidity</b>(%)</p>
-                    <p>{humidity}</p>
+                    <p><b>Humidity</b> (%): {humidity}</p>
                 </div>
             </div>
 

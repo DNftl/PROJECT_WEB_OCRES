@@ -20,8 +20,6 @@ export default function InfoJournal(props) {
                 </div>
             </div>
 
-        
-
             <div className="row">
                 <div className="col-md-sm-xs-8 weather-info">   
                     <p>Source : {art1Source}</p>

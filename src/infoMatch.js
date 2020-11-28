@@ -11,9 +11,9 @@ export default function InfoMatch(props) {
         <div className="user-weather">
             <div className="row">
                 <div className="col-md-sm-xs-12 weather-temp">
-                    <p>Nom du championnat : {nomLigue1}</p>
+                    <p>Championship name: {nomLigue1}</p>
                     <p><img alt="" className="imageLogoLeague" src={logoLigue}></img></p>
-                    <p>Date : {dateMatch}</p>
+                    <p>Date: {dateMatch}</p>
                 </div>
             </div>
             <div className="row">
@@ -40,12 +40,12 @@ export default function InfoMatch(props) {
             </div>
             <div className="row">
                 <div className="col-md-sm-xs-12 weather-info">
-                    <p>score : <h4>{scoreEquipeHome1} - {scoreEquipeExt1}</h4></p>
+                    <p>Score: <h4>{scoreEquipeHome1} - {scoreEquipeExt1}</h4></p>
                 </div>
             </div>
             <div className="row">
                 <div className="col-md-sm-xs-12 weather-info">
-                    <p>Possession : H {statPossHome} - A {statPossAway}</p>
+                    <p>Possession: H {statPossHome} - A {statPossAway}</p>
                 </div>
             </div>
 

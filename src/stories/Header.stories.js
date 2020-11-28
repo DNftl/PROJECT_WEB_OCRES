@@ -8,9 +8,9 @@ export default {
 };
 
 
-export const Text = () => <Header>Hello Header</Header>;
+export const Text = () => <Header></Header>;
 
-
+/*
 const Template = (args) => <Header {...args} />;
 
 export const LoggedIn = Template.bind({});
@@ -20,3 +20,4 @@ LoggedIn.args = {
 
 export const LoggedOut = Template.bind({});
 LoggedOut.args = {};
+*/

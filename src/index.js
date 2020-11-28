@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 //importation pour storybook
 import Button from './components/Button';
 import Header from './components/Header';
+import WidgetMeteo from './components/WidgetMeteo';
 //import Input from './components/Input';
 
 import reportWebVitals from './reportWebVitals';
@@ -26,6 +27,7 @@ import widgetGraphPie from './widgetGraphPie.js';
 
 import widgetJournal from './widgetJournal.js';
 import infoJournal from './infoJournal.js';
+
 
 ReactDOM.render(
     <Header />,

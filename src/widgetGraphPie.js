@@ -25,21 +25,25 @@ export default class GraphPie extends React.Component {
 
       <div className="App">
         <div className="container">
-<<<<<<< HEAD
           <div className="borderWidg">
-=======
-        <div className="borderWidg">
->>>>>>> e2fd92b03f55a8d0b6e0ce9a4ba7b6f827b34315
 
-          <h1>Objectifs prochain voyage</h1> 
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <h1 className="textwidgetcenter3">Budgeting</h1>
+                <br />
+              </div>
 
-          <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={data}>
-            <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="uv" />
-            <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
-          </RadialBarChart>
-        </div>
-        </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                  <br />
+                  <div id="Button"></div>
+              </div>
+            </div>
 
+            <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={data}>
+              <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="uv" />
+              <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
+            </RadialBarChart>
+          </div>
         </div>
       </div>
 

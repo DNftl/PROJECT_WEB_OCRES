@@ -21,40 +21,44 @@ export default class GraphLine extends React.Component {
     return (
 
       <div className="App">
-<<<<<<< HEAD
         <div className="container" > 
           <div className="borderWidg">
 
-=======
-        <div className="container">
-          <div className="borderWidg">
-            <br/>
-          <h1>Suivi de comptes</h1>      
->>>>>>> e2fd92b03f55a8d0b6e0ce9a4ba7b6f827b34315
+          
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+              <h1 className="textwidgetcenter3">Accounting</h1>
+              <br /> 
+            </div>
 
-          <h1 className="textwidgetcenter">Suivi de comptes</h1>      
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <br />
+                <div id="Button"></div>
+            </div>
+          </div>
 
           <LineChart 
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-              top: 5, right: 30, left: 20, bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="Sorties" stroke="#8884d8" activeDot={{ r: 8 }} />
-            <Line type="monotone" dataKey="Entrees" stroke="#82ca9d" />
-          </LineChart>
-            </div>
+                width={500}
+                height={350}
+                data={data}
+                margin={{
+                  top: 5, right: 30, left: 20, bottom: 5,
+                }}
+                >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="Sorties" stroke="#8884d8" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="Entrees" stroke="#82ca9d" />
+                </LineChart>
+
+
+          </div>
         </div>
 
         </div>
-      </div>
 
     );
   }

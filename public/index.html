@@ -18,7 +18,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css"/>
-   
+    <link rel="stylesheet" href="./components/Button/Button.css"/>
+    
+
     <title>Dashboard</title>
   </head>
 
@@ -32,7 +34,7 @@
           <div class="wrapper">
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <h2> </br> DASHBOARD - VOYAGE </br> </br> </h2>
+                <div id="Header" ></div>
               </div>
             </div>
           </div>
@@ -41,12 +43,14 @@
 
         <div class="row">
 
-          <!-- COLONNE DE GAUCHE -->
+          
+          <!-- COLONNE DE GAUCHE
           <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="background-color:lavender;">
             <aside>
                 <div class="d-none d-xl-block">
                     
                     <h6>Liste de destinations</h6>
+
                     <nav class="browse">
                         <ul class="main">
                             <li><a class="heavy" href="#">London</a></li>
@@ -57,9 +61,11 @@
                 </div>
             </aside>
           </div>
+           -->
+           
 
           <!-- TABLEAU DE BORD PRINCIPAL -->
-          <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 col-xl-11" style="background-image:linear-gradient(to right, #AA076B,#61045F);">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="background-image:linear-gradient(to right, #AA076B,#61045F);">
                 <div class="row">
 
                   <!-- WIDGET MATCH -->
@@ -82,7 +88,15 @@
                 <div class="row" style="background-image:linear-gradient(to right, #AA076B,#61045F);">
                     <!-- WIDGET GRAPHLINE -->
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                      <div id="root4"></div>
+                        <div class="row">
+                          <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                            <div id="root4"></div>
+                          </div>
+
+                          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                            <div id="Button">Coucou</div>
+                          </div>
+                        </div>
                     </div>
 
                     <!-- WIDGET GRAPHPIE -->

@@ -21,11 +21,13 @@ export default class GraphLine extends React.Component {
     return (
 
       <div className="App">
-        <div className="container">
+        <div className="container" > 
+          <div className="borderWidg">
 
-          <h1>Suivi de comptes</h1>      
 
-          <LineChart
+          <h1 className="textwidgetcenter">Suivi de comptes</h1>      
+
+          <LineChart 
             width={500}
             height={300}
             data={data}
@@ -41,6 +43,8 @@ export default class GraphLine extends React.Component {
             <Line type="monotone" dataKey="Sorties" stroke="#8884d8" activeDot={{ r: 8 }} />
             <Line type="monotone" dataKey="Entrees" stroke="#82ca9d" />
           </LineChart>
+
+        </div>
 
         </div>
       </div>

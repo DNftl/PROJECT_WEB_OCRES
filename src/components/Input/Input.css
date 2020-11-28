@@ -1,0 +1,16 @@
+.input {
+    display: block;
+    width: 400px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid;
+    padding: .8em 1em;
+    border-color: inherit;
+    background-color: white;
+  }
+
+ .small {
+     height: 2rem;
+     font-size: 0.875rem;
+  }

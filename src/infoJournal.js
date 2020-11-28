@@ -1,5 +1,5 @@
 import React from 'react';
-//import "./index.css";
+import "./index.css";
 
 export default function InfoJournal(props) {
     
@@ -9,8 +9,18 @@ export default function InfoJournal(props) {
     return (
         
         <div className="user-weather">
-            <h4>Article 1 : {art1Title}</h4>
-            <p>{art1Content}</p>
+
+            <div className="row">
+                <div className="col-md-sm-xs-7 weather-info"> 
+                    <h4>Article 1 : {art1Title}</h4>
+                    <p>{art1Content}</p>  
+                </div>
+                <div className="col-md-sm-xs-5 weather-info">
+                     <p><img className="imageArt" src={art1Image}></img></p>
+                </div>
+            </div>
+
+        
 
             <div className="row">
                 <div className="col-md-sm-xs-8 weather-info">   
@@ -20,7 +30,6 @@ export default function InfoJournal(props) {
                     <p>Date : {art1Date}</p>
                 </div>
             </div>
-            <p>{art1Image}</p>
 
             <h4>Article 2 : {art2Title}</h4>
             <p>{art2Content}</p>
@@ -33,9 +42,7 @@ export default function InfoJournal(props) {
                     <p>Date : {art2Date}</p>
                 </div>
             </div>
-            <p>{art2Image}</p>
-
-            
+            <p><img className="imageArt" src={art2Image}></img></p>
         </div>
     )
 }

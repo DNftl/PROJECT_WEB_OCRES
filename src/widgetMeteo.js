@@ -3,13 +3,14 @@ import React from "react";
 //import React, { Component } from "react";
 import Axios from "axios";
 //import React from 'react';
-import LocationMeteo from './locationMeteo.js';
+import InfoMeteo from './infoMeteo.js';
 
 
 
 const api_key = "4081444b7b90198136fefe6ed4ccf35b";
 //6a899154a031cb42971d850ed003d5a9
 const api_url = "https://api.openweathermap.org/data/2.5/weather";
+const api_url_icon = "http://openweathermap.org/img/wn/";
 
 
 //https://api.openweathermap.org/data/2.5/weather?q=paris&units=metric&appid=4081444b7b90198136fefe6ed4ccf35b
@@ -17,14 +18,21 @@ const api_url = "https://api.openweathermap.org/data/2.5/weather";
 //http://api.weatherstack.com/current?access_key=79b7f4046fe000ff33873b0824b2a65f&query=New%20York
 
 
+<<<<<<< HEAD
+=======
+
+//http://openweathermap.org/img/wn/10d@2x.png
+
+
+
+>>>>>>> e2fd92b03f55a8d0b6e0ce9a4ba7b6f827b34315
 class Meteo extends React.Component {
 
   //state
   state = {
 
     weather: {},
-    regionInput: "",
-    logo:{}
+    regionInput: ""
   }
 
   changeRegion = (value) => {
@@ -43,7 +51,7 @@ class Meteo extends React.Component {
       let userWeather = {
         temperature: res.data.main.temp,
         description: res.data.weather[0].description,
-        //image: this.getHTMLElementFromimageIcon(res.data.weather[0].icon),    // res.data.weather.icon,   //getHTMLElementFromIcon(data.weather[0].icon);
+        //image: 
         pression: res.data.main.pressure,
         humidity : res.data.main.humidity,
         windSpeed: res.data.wind.speed,
@@ -53,20 +61,33 @@ class Meteo extends React.Component {
         nuagePourcentage : res.data.clouds.all,
         timeSunrise : res.data.sys.sunrise,
         nomCity : res.data.name,
-        paramInter : res.data.cod
+        paramInter : res.data.cod, 
+        icon : res.data.weather[0].icon
       }
 
       this.setState({ weather: userWeather });
 
     })
-
   }
 
-  findLogoMeteo = (e) => {
+  /*
+  changeIcon = (e) => {
+
+    e=this.weather.icon;
+
+  Axios.get(`${api_url_icon}${e}@2x.png`)
+  .then(res => {
+
+    console.log(res);
+  })
+  }
+*/
+
+  /*findLogoMeteo = (e) => {
 
     e.preventDefault()
 
-    Axios.get(`http://api.weatherstack.com/current?access_key=79b7f4046fe000ff33873b0824b2a65f&query=${this.state.regionInput}`)
+    /*Axios.get(`http://api.weatherstack.com/current?access_key=79b7f4046fe000ff33873b0824b2a65f&query=${this.state.regionInput}`)
     .then(res => {
 
       console.log(res);
@@ -75,11 +96,13 @@ class Meteo extends React.Component {
         image : res.data.current.weather_icons
       }
 
-      this.setState({ logo: newvar });
+      this.setState({ weather: newvar });
 
     })
+  }*/
 
-  }
+
+
 
 
   render() 
@@ -98,10 +121,9 @@ class Meteo extends React.Component {
                 </div>
                 </form>
 
-                <p>{this.state.weather.temperature}</p>
-                
+                {/*<button id="city-input-button" type="submit" onClick={(e) => { this.changeIcon(e) }}>afficher</button>*/}
 
-                <LocationMeteo weather={this.state.weather} />   
+                <InfoMeteo weather={this.state.weather} />    
               </div>
         </div>
       </div>

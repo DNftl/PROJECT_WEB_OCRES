@@ -25,7 +25,11 @@ export default class GraphPie extends React.Component {
 
       <div className="App">
         <div className="container">
+<<<<<<< HEAD
           <div className="borderWidg">
+=======
+        <div className="borderWidg">
+>>>>>>> e2fd92b03f55a8d0b6e0ce9a4ba7b6f827b34315
 
           <h1>Objectifs prochain voyage</h1> 
 
@@ -33,7 +37,7 @@ export default class GraphPie extends React.Component {
             <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="uv" />
             <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
           </RadialBarChart>
-
+        </div>
         </div>
 
         </div>

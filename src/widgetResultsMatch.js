@@ -8,24 +8,36 @@ const api_url = "https://apiv2.apifootball.com/?action=get_events";
 
 //https://apiv2.apifootball.com/?action=get_events&from=2019-04-01&to=2019-04-01&APIkey=523458a0b3a59fb1523e0b735b07893ae95ccae40042bafcc814df82891bcad9&match_date=2019-04-01&country_id=41
 
+
 class Match extends React.Component {
 
+
+constructor(props){
+  super(props)
+  this.state = {
+    Infos: {},
+    DateMatch: "", 
+    nb: 0
+  };
+}
+/*
   //state
   state = {
     Infos: {},
-    NumeroDeLigue: ""
+    NumeroDeLigue: "", 
+    nb: 0
   }
+*/
 
-
-  changeCountry = (value) => {
-    this.setState({ NumeroDeLigue: value })
+  changeDate = (value) => {
+    this.setState({ DateMatch: value })
   }
 
   updateInfos = (e) => {
 
     e.preventDefault()
 
-    Axios.get(`${api_url}&from=${this.state.NumeroDeLigue}&to=2020-12-08&APIkey=${api_key}&match_date=2020-11-15&country_id=41`)         
+    Axios.get(`${api_url}&from=${this.state.DateMatch}&to=2020-12-04&APIkey=${api_key}&match_date=2020-11-30&country_id=41`)         
     .then(res => {
      // https://apiv2.apifootball.com/?action=get_events&from=2020-11-17&to=2020-12-08&APIkey=523458a0b3a59fb1523e0b735b07893ae95ccae40042bafcc814df82891bcad9&match_date=2020-11-15&country_id=41
       console.log(res);
@@ -34,6 +46,8 @@ class Match extends React.Component {
         dateMatch: res.data[0].match_date,
         
         nomLigue1: res.data[0].league_name,
+        logoLigue: res.data[0].league_logo,
+
         nomEquipeHome1: res.data[0].match_hometeam_name,
         nomEquipeExt1: res.data[0].match_awayteam_name,
         scoreEquipeExt1: res.data[0].match_awayteam_score,
@@ -41,7 +55,10 @@ class Match extends React.Component {
         systemAway: res.data[0].match_awayteam_system,
         systemHome: res.data[0].match_hometeam_system, 
         statPossAway: res.data[0].statistics[0].away, 
-        statPossHome: res.data[0].statistics[0].home
+        statPossHome: res.data[0].statistics[0].home, 
+
+        logoHome: res.data[0].team_home_badge,
+        logoAway: res.data[0].team_away_badge
 
 
 
@@ -68,6 +85,7 @@ class Match extends React.Component {
 
   }
 
+
   render() 
   {
     return (
@@ -80,9 +98,10 @@ class Match extends React.Component {
           <h1>Match Widget</h1>
 
                 <form className="region" onSubmit={(e) => { this.updateInfos(e) }}>
-                  <input type="text" className="" placeholder="Enter a date ex : 2020-11-22" onChange={(e) => { this.changeCountry(e.target.value) }} />
+                  <input type="text" className="" placeholder="Enter a date ex : 2020-11-20" onChange={(e) => { this.changeDate(e.target.value) }} />
                 </form>
-                <br/>
+      
+              <br/>
                <InfoMatch pc={this.state.Infos} />
         </div>
         </div>

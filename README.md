@@ -1,3 +1,29 @@
+# MEMBRES DU GROUPE
+
+TD04B - JEGO-RAGAS Tiffanie
+TD04B - NEFTEL David
+
+# DESCRIPTION DU PROJET
+
+Dashboard présentant 7 widgets sur le thème des pays et leurs actualités.
+Le dashboard a été pensé de façon à ce que la personne puisse programmer son prochain voyage, en ayant connaissance de la météo actuelle, des informations basiques sur le pays et de son suivi financier. En plus de cela, il peut s'informer sur les actualités des pays grâce aux articles et aux résultats de foot.
+
+# DOCUMENTATION POUR LANCER LE PROJET
+
+Le dashboard est anglais, il faut donc renseigner les demandes en anglais.
+Par exemple, pour le widget 'COUNTRY', il faut rechercher 'Spain' ou 'USA'.
+Pour visualiser le widget 'MAP', il faut installer à partir de son terminale "npm install google-maps-react --save".
+
+# ELEMENTS NE FONCTIONNANT PAS
+
+A la date du 30/11, les boutons "Formulaire" ne marchent pas encore.
+Cela est normal, ils sont reliés à la page administrateur qui n'est pas encore aboutie.
+
+# LIEN TRELLO POUR L'ORGANISATION DU TRAVAIL
+
+https://trello.com/b/hsK491zB/mod%C3%A8le-kanban
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

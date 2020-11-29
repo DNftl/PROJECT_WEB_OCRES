@@ -104,7 +104,7 @@ constructor(props){
     return (
       <div className="App">
         <br/>
-        <div className="container">
+        <div className="container-fluid">
         <div className="borderWidg">
         
 

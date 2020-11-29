@@ -4,6 +4,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+//importation pour storybook
+import Button from './components/Button';
+import Header from './components/Header';
+import WidgetMeteo from './components/WidgetMeteo';
+//import Input from './components/Input';
+
 import reportWebVitals from './reportWebVitals';
 import widgetMeteo from "./widgetMeteo.js";
 import infoMeteo from './infoMeteo.js';
@@ -22,12 +28,22 @@ import widgetGraphPie from './widgetGraphPie.js';
 import widgetJournal from './widgetJournal.js';
 import infoJournal from './infoJournal.js';
 
-import MapContainer from './widgetMap';
-
 import widgetStandingFoot from './widgetStandingFoot.js';
 import infoClassement from './infoClassement.js';
 
+import MapContainer from './widgetMap';
 
+
+ReactDOM.render(
+    <Header />,
+    document.getElementById('Header')
+  );
+
+
+ReactDOM.render(
+    <Button />,
+    document.getElementById('Button')
+  );
 
 
 ReactDOM.render(

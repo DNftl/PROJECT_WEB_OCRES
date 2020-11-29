@@ -6,48 +6,51 @@ export default function InfoPays(props) {
     const {alphcode, nom, capitale, republic, region, pop, currname, currsymb, drapeau} = props.pa;
 
     return (
-        
+        <div class="container-fluid">
+
         <div className="user-weather">
 
             <div>
-            <p><img className="imageFlag" src={drapeau}></img></p>
+            <p className="matchCenter"><img className="imageFlag" src={drapeau}></img></p>
             </div>
+            
+            
             <div className="row">
-                <div className="col-md-sm-xs-6 weather-temp">
-                    <p>{nom}, {alphcode}</p>
-                </div>
-                <div className="col-md-sm-xs-6">
-                    
+                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 weather-temp">
+                    <p className="matchCenter"><b>{nom}, {alphcode}</b></p>
                 </div>
             </div>
 
             <div className="row">
-                <div className="col-md-sm-xs-6 weather-info">   
-                    <p>Capitale : {capitale}</p>
+                <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 weather-info">   
+                    <p><b>Capital city:</b> {capitale}</p>
                 </div>
-                <div className="col-md-sm-xs-6 weather-info">
-                    <p>Continent : {region}</p>
+                <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 weather-info">
+                    <p><b>Continent:</b> {region}</p>
                 </div>
             </div>
 
             <div className="row">   
-                <div className="col-md-sm-xs-6 weather-info">
-                    <p>Population : {pop}</p>
+                <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 weather-info">
+                    <p><b>Population:</b> {pop}</p>
                 </div>
-                <div className="col-md-sm-xs-6 weather-info">
-                    <p>Republic : {republic}</p>
+                <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 weather-info">
+                    <p><b>Republic:</b> {republic}</p>
                 </div>
             </div>
 
             <div className="row">   
-                <div className="col-md-sm-xs-6 weather-info">
-                    <p>Devise : {currname}</p>
+                <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 weather-info">
+                    <p><b>Currency:</b> {currname}</p>
                 </div>
-                <div className="col-md-sm-xs-6 weather-info">
-                    <p>Symbole : {currsymb}</p>
+                <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 weather-info">
+                    <p><b>Symbole:</b> {currsymb}</p>
                 </div>
 
             </div>
+
+        </div>
+
         </div>
     )
 }

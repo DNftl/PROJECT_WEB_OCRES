@@ -60,16 +60,18 @@ class Pays extends React.Component {
     return (
       <div className="App">
                 <br/>
-        <div className="container">
+        <div className="container-fluid">
         <div className="borderWidg">
 
-          <h1>Country Widget</h1>
-
-              
+          <h1 className="textwidgetcenter3">Country Widget</h1>
+          <br/>
+          
                 <form className="" onSubmit={(e) => { this.changeLocationAirport(e) }}>
-                  <input type="text" className="regioninput" placeholder="Select your region" onChange={(e) => { this.changeAirport(e.target.value) }} />
-                  </form>
-                  <br/>
+                <div class="d-flex justify-content-center">
+                  <input type="text" className="textwidgetcenter" placeholder="Enter a country" onChange={(e) => { this.changeAirport(e.target.value) }} />
+                </div>
+                </form>
+                <br/>
                <InfoPays pa={this.state.infopays} />
           </div>
         </div>

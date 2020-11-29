@@ -11,38 +11,40 @@ export default function InfoJournal(props) {
         <div className="user-weather">
 
             <div className="row">
-                <div className="col-md-sm-xs-7 weather-info"> 
+               <div className="col-lg-9 col-md-9 col-sm-9 col-xs-9 weather-info">
                     <h4>Article 1 : {art1Title}</h4>
-                    <p>{art1Content}</p>  
+                    <p>Date : {art1Date}</p>
                 </div>
-                <div className="col-md-sm-xs-5 weather-info">
+
+                <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 weather-info">
                      <p><img className="imageArt" src={art1Image}></img></p>
                 </div>
             </div>
 
-        
-
             <div className="row">
-                <div className="col-md-sm-xs-8 weather-info">   
-                    <p>Source : {art1Source}</p>
-                </div>
-                <div className="col-md-sm-xs-4 weather-info">
-                    <p>Date : {art1Date}</p>
+                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 weather-info"> 
+                    <p>{art1Content}</p>
+                    <p>Source : {art1Source}</p> 
                 </div>
             </div>
 
-            <h4>Article 2 : {art2Title}</h4>
-            <p>{art2Content}</p>
-
             <div className="row">
-                <div className="col-md-sm-xs-8 weather-info">   
-                    <p>Source : {art2Source}</p>
-                </div>
-                <div className="col-md-sm-xs-6 weather-info">
+                <div className="col-lg-9 col-md-9 col-sm-9 col-xs-9 weather-info">
+                    <h4>Article 2 : {art2Title}</h4>
                     <p>Date : {art2Date}</p>
                 </div>
+
+                <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 weather-info">
+                     <p><img className="imageArt" src={art2Image}></img></p>
+                </div>
             </div>
-            <p><img className="imageArt" src={art2Image}></img></p>
+
+            <div className="row">
+                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 weather-info"> 
+                    <p>{art2Content}</p>
+                    <p>Source : {art2Source}</p> 
+                </div>
+            </div>
         </div>
     )
 }

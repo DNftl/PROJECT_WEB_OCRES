@@ -51,10 +51,6 @@ class Journal extends React.Component {
     })
   }
 
-
-
-
-
   autresArticles = (e) => {
 
     e.preventDefault()
@@ -94,10 +90,11 @@ class Journal extends React.Component {
     return (
       <div className="App">
         <br/>
-        <div className="container">
+        <div className="container-fluid">
         
         <div className="borderWidg">
-          <h1 className="textwidgetcenter">Journal Widget</h1>
+          <h1 className="textwidgetcenter3">Journal Widget</h1>
+          <br />
 
                 <form className="region" onSubmit={(e) => { this.changeLocationNewAPI(e) }}>
                 <div class="d-flex justify-content-center">
@@ -107,7 +104,7 @@ class Journal extends React.Component {
                 <br/><br/>
                 
                 <InfoJournal inf={this.state.dataJ} />  
-                <button id="city-input-button" type="submit" onClick={(e) => { this.autresArticles(e) }}>Autres</button>
+                <button className="boutonAutre" id="city-input-button" type="submit" onClick={(e) => { this.autresArticles(e) }}>Random</button>
               </div>
               <br/>
         </div>

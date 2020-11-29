@@ -59,7 +59,7 @@ class Meteo extends React.Component {
         timeSunrise : res.data.sys.sunrise,
         nomCity : res.data.name,
         paramInter : res.data.cod, 
-        icon : res.data.weather[0].icon
+        icon : res.data.weather.icon
       }
 
       this.setState({ weather: userWeather });
@@ -98,23 +98,20 @@ class Meteo extends React.Component {
     })
   }*/
 
-
-
-
-
   render() 
   {
     return (
       <div className="App">
         <br/>
-        <div className="container">
+        <div className="container-fluid">
         
         <div className="borderWidg">
-          <h1 className="textwidgetcenter">Weather Widget</h1>
+          <h1 className="textwidgetcenter3">Weather Widget</h1>
+          <br/>
 
                 <form className="region" onSubmit={(e) => { this.changeLocationNewAPI(e) }}>
                 <div class="d-flex justify-content-center">
-                  <input type="text" className="textwidgetcenter" placeholder="Enter your region" onChange={(e) => { this.changeRegion(e.target.value) }} />
+                  <input type="text" className="textwidgetcenter" placeholder="Enter your city" onChange={(e) => { this.changeRegion(e.target.value) }} />
                 </div>
                 </form>
 

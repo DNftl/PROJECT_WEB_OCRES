@@ -72,7 +72,6 @@ constructor(props){
         buteur1: res.data[0].goalscorer[0].home_scorer,
         buteur11: res.data[0].goalscorer[1].home_scorer,
         
-
         buteur2: res.data[1].goalscorer[0].home_scorer,
         buteur22: res.data[1].goalscorer[1].home_scorer,*/
         
@@ -91,14 +90,15 @@ constructor(props){
     return (
       <div className="App">
         <br/>
-        <div className="container">
+        <div className="container-fluid">
         <div className="borderWidg">
         
 
-          <h1>Match Widget</h1>
+          <h1 className="textwidgetcenter3">Match Widget</h1>
+          <br />
 
                 <form className="region" onSubmit={(e) => { this.updateInfos(e) }}>
-                  <input type="text" className="" placeholder="Enter a date ex : 2020-11-20" onChange={(e) => { this.changeDate(e.target.value) }} />
+                  <input type="text" className="textwidgetcenter" placeholder="Enter a date ex : 2020-11-20" onChange={(e) => { this.changeDate(e.target.value) }} />
                 </form>
       
               <br/>

@@ -91,26 +91,31 @@ export class MapGoogle extends Component {
 
       <div className="App">
         <br/>
-        <div className="container">
+        <div className="container-fluid">
         
         <div className="borderWidg">
-        <h1 className="textwidgetcenter">Map Widget</h1>
-      <Map
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={
-          {
-            lat: 48.85307356091354,
-            lng: 2.2965024928024427
-          }
-        }
-      />
-      <br/><br/><br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/><br/><br/>
-      <br/><br/>a
-      </div>
-      </div>
+          <h1 className="textwidgetcenter3">Map Widget</h1>
+          <br/>
+            <p className="matchCenter">
+            <Map
+              google={this.props.google}
+              zoom={14}
+              style={mapStyles}
+              initialCenter={
+                {
+                  lat: 48.85307356091354,
+                  lng: 2.2965024928024427
+                }
+              }
+            />
+            </p>
+
+            <br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/>
+            
+        </div>
+        </div>
       
       </div>
     );

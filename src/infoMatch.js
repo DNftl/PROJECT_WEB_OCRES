@@ -10,45 +10,25 @@ export default function InfoMatch(props) {
     return (
         <div className="user-weather">
             <div className="row">
-                <div className="col-md-sm-xs-12 weather-temp">
-                    <p>Championship name: {nomLigue1}</p>
-                    <p><img alt="" className="imageLogoLeague" src={logoLigue}></img></p>
-                    <p>Date: {dateMatch}</p>
+                <div className="col-lg-9 col-md-9 col-sm-9 col-xs-9 weather-temp">
+                    <p><b>Championship name:</b> {nomLigue1}</p>
                 </div>
-            </div>
-            <div className="row">
-                <div className="col-md-sm-xs-12">
-                <p>{nomEquipeHome1} VS {nomEquipeExt1}</p>
-                </div>
-            </div>
-            <div className="row">
-            <br/>
-                <div className="col-md-sm-xs-4 weather-info">
-                    <p>{systemHome}</p>
-                </div>
-                <div className="col-md-sm-xs-4 weather-info">
-                    <p>VS</p>
-                </div>
-                <div className="col-md-sm-xs-4 weather-info">
-                    <p>{systemAway}</p>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-md-sm-xs-12 weather-info">
-                    <p><img className="imageLogoTeam" alt="" src={logoHome}></img> - <img alt="" className="imageLogoTeam" src={logoAway}></img></p>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-md-sm-xs-12 weather-info">
-                    <p>Score: <h4>{scoreEquipeHome1} - {scoreEquipeExt1}</h4></p>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-md-sm-xs-12 weather-info">
-                    <p>Possession: H {statPossHome} - A {statPossAway}</p>
-                </div>
-            </div>
 
+                <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 weather-temp">
+                    <p><img alt="" className="imageLogoLeague" src={logoLigue}></img></p>
+                    
+                </div>
+            </div>
+            
+            <div className="row">
+                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p className="matchCenter"><b>Date:</b> {dateMatch}</p>
+                    <p className="matchCenter"><img className="imageLogoTeam" alt="" src={logoHome}></img> <b>{scoreEquipeHome1} - {scoreEquipeExt1}</b> <img className="imageLogoTeam" alt="" src={logoAway}></img></p>
+                    <p className="matchCenter"><b>{nomEquipeHome1}</b> VS <b>{nomEquipeExt1}</b></p>
+                    <p className="matchCenter"><b>{systemHome}</b> VS <b>{systemAway}</b></p>
+                    <p className="matchCenter"><b>Possession:</b> H {statPossHome} - A {statPossAway}</p>
+                </div>
+            </div>
         </div>
     )
 }

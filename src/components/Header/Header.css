@@ -5,4 +5,5 @@
   border-bottom: solid 5px aqua;
   padding-bottom: .2em;
   box-shadow: 0 5px 0 white;
+  background-image:linear-gradient(to right, #AA076B,#61045F);
 }

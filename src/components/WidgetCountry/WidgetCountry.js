@@ -13,12 +13,9 @@ const WidgetCountry = ({ children }) => {
       </div>   
     
     <div id ="monTexte">
-    <p><b>Capital city:</b></p>
-    <p><b>Continent: </b></p>
-    <p><b>Population:</b></p>
-    <p><b>Republic: </b></p>
-    <p><b>Currency: </b></p>
-    <p><b>Symbol:</b></p>
+    <p>Capital city:   Continent: </p>
+    <p>Population:     Republic:</p>
+    <p>Currency:       Symbol:</p>
     </div>
 
     </h2>

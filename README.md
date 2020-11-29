@@ -11,16 +11,17 @@ Le dashboard a été pensé de façon à ce que la personne puisse programmer so
 # DOCUMENTATION POUR LANCER LE PROJET
 
 Le dashboard est anglais, il faut donc renseigner les demandes en anglais.
-Par exemple pour le widget 'COUNTRY', il faut rechercher 'Spain' ou 'USA' par exemple.
+Par exemple, pour le widget 'COUNTRY', il faut rechercher 'Spain' ou 'USA'.
+Pour visualiser le widget 'MAP', il faut installer à partir de son terminale "npm install google-maps-react --save".
 
 # ELEMENTS NE FONCTIONNANT PAS
 
-A la date du 30/11, les boutons "Rentrer mes données" ne marchent pas encore.
-Cela est normal, ils sont reliés à la page administrateur qiu n'est pas encore aboutie.
+A la date du 30/11, les boutons "Formulaire" ne marchent pas encore.
+Cela est normal, ils sont reliés à la page administrateur qui n'est pas encore aboutie.
 
-# LIEN TRELLO POUR LA REPARTITION DU TRAVAIL
+# LIEN TRELLO POUR L'ORGANISATION DU TRAVAIL
 
-A AJOUTER
+https://trello.com/b/hsK491zB/mod%C3%A8le-kanban
 
 
 # Getting Started with Create React App

@@ -60,7 +60,7 @@ class Pays extends React.Component {
     return (
       <div className="App">
                 <br/>
-        <div className="container">
+        <div className="container-fluid">
         <div className="borderWidg">
 
           <h1 className="textwidgetcenter3">Country Widget</h1>

@@ -28,6 +28,11 @@ import widgetGraphPie from './widgetGraphPie.js';
 import widgetJournal from './widgetJournal.js';
 import infoJournal from './infoJournal.js';
 
+import widgetStandingFoot from './widgetStandingFoot.js';
+import infoClassement from './infoClassement.js';
+
+import MapContainer from './widgetMap';
+
 
 ReactDOM.render(
     <Header />,
@@ -41,5 +46,9 @@ ReactDOM.render(
   );
 
 
-
-
+ReactDOM.render(
+    <React.StrictMode>
+      <MapContainer />
+    </React.StrictMode>,
+    document.getElementById('root7')
+  );

@@ -19,7 +19,7 @@ const WidgetMeteo = ({ children }) => {
       <p>City searched and its country:</p>
       <br/>
 
-      <p>Temp max </p>
+      <p>Temp max: </p>
       <p>Temp min: </p>
       <p>Wind Speed: <b>(km/hr)</b></p>
       <p>Preassure: <b>(millibar)</b></p>

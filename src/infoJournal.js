@@ -11,13 +11,13 @@ export default function InfoJournal(props) {
         <div className="user-weather">
 
             <div className="row">
-                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2 weather-info">
-                     <p><img className="imageArt" src={art1Image}></img></p>
-                </div>
-
-                <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10 weather-info">
+               <div className="col-lg-9 col-md-9 col-sm-9 col-xs-9 weather-info">
                     <h4>Article 1 : {art1Title}</h4>
                     <p>Date : {art1Date}</p>
+                </div>
+
+                <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 weather-info">
+                     <p><img className="imageArt" src={art1Image}></img></p>
                 </div>
             </div>
 
@@ -29,13 +29,13 @@ export default function InfoJournal(props) {
             </div>
 
             <div className="row">
-                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2 weather-info">
-                     <p><img className="imageArt" src={art2Image}></img></p>
-                </div>
-
-                <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10 weather-info">
+                <div className="col-lg-9 col-md-9 col-sm-9 col-xs-9 weather-info">
                     <h4>Article 2 : {art2Title}</h4>
                     <p>Date : {art2Date}</p>
+                </div>
+
+                <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 weather-info">
+                     <p><img className="imageArt" src={art2Image}></img></p>
                 </div>
             </div>
 

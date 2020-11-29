@@ -3,13 +3,15 @@ import "./index.css";
 
 export default function InfoMeteo(props) {
     
-    const {temperature, description, image, pression, humidity, windSpeed,country, tempMax, tempMin, nuagePourcentage, timeSunrise, nomCity, paramInter, icon} = props.weather;
+    const {temperature, description, nomCity,pression, humidity, windSpeed,country, 
+        tempMax, tempMin, icon, nuagePourcentage/*, timeSunrise, image, paramInter*/} = props.weather;
 
     return (
         <div className="determ">
+            <div class="container-fluid"> 
             <div className="row">
                 <div className="col-md-sm-xs-12">
-                
+
                 <br/> <br/>
                     <p>Temperature :</p><h3>{temperature}<sup>o</sup>C</h3>
                     <br/>
@@ -21,7 +23,7 @@ export default function InfoMeteo(props) {
 
                 <div className="col-md-sm-xs-0">
                     <br/>
-                    <p><img className="imageIconMeteo" src={icon}></img></p>
+                    <p><img className="imageIconMeteo" alt="img" src={icon}></img></p>
                 </div>
             </div>
 
@@ -61,7 +63,7 @@ export default function InfoMeteo(props) {
                 </div>
             </div>
 
-           
+           </div>
         </div>
     )
 }

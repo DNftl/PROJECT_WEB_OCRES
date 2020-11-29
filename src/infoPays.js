@@ -17,7 +17,7 @@ export default function InfoPays(props) {
                     <p>{nom}, {alphcode}</p>
                 </div>
                 <div className="col-md-sm-xs-6">
-                    <p>{drapeau}</p>
+                    
                 </div>
             </div>
 

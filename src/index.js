@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 //importation pour storybook
 import Button from './components/Button';
+import Form from './components/Button/formulaire';
+import {BrowserRouter} from 'react-router-dom';
 import Header from './components/Header';
 import WidgetMeteo from './components/WidgetMeteo';
 //import Input from './components/Input';
@@ -43,6 +45,14 @@ ReactDOM.render(
 ReactDOM.render(
     <Button />,
     document.getElementById('Button')
+  );
+
+  
+  ReactDOM.render(
+    <BrowserRouter>
+      <Form />
+    </BrowserRouter>,
+    document.getElementById('Form')
   );
 
 

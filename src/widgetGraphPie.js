@@ -34,7 +34,7 @@ export default class GraphPie extends React.Component {
               </div>
 
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                  <div id="Button"></div>
+              <div id="Button"></div>
               </div>
             </div>
 

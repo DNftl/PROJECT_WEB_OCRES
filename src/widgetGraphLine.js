@@ -32,8 +32,8 @@ export default class GraphLine extends React.Component {
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                <br />
-                <div id="Button"></div>
+                <br/>
+                 <div id="Button"></div>
             </div>
           </div>
 

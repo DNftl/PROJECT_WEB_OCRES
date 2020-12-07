@@ -8,13 +8,8 @@ const Form =()=>{
         <div className="App">
           <br/>
           <div className="container-fluid"> 
-          <div className="borderWidg">
-              <h1>Heyyyyyy</h1> 
-              <h1>Heyyyyyy</h1>
-              <h1>Heyyyyyy</h1>
-              <h1>Heyyyyyy</h1>
-              <h1>Heyyyyyy</h1>   
-          </div>
+        
+          <input type="text" className="textwidgetcenter" placeholder="Enter your city" onChange={(e) => { this.changeRegion(e.target.value) }} />
           </div>
         </div>
       );

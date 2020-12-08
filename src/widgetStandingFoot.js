@@ -10,6 +10,8 @@ const api_url = "http://livescore-api.com/api-client/leagues/table.json";
 
 //http://livescore-api.com/api-client/leagues/table.json?key=Z26QvAoiAYrC4gRe&secret=Zv7uUyrPTWDf4Bs3EyU98jrIiSlm9dA8&league=25&season=4
 
+/*
+
 class Classement extends React.Component {
 
 
@@ -30,10 +32,10 @@ constructor(props){
     .then(res => {
     
       console.log(res);
-/*
+
       let NewInfos = {
         
-        nomE1 : res.data.table[0].name,
+        nomE1 : res.data.table[0].name
         nomE2 : res.data.table[1].name,
         nomE3 : res.data.table[2].name,
         nomE4 : res.data.table[3].name,
@@ -42,8 +44,8 @@ constructor(props){
         nomE7 : res.data.table[6].name,
         nomE8 : res.data.table[7].name,
         nomE9 : res.data.table[8].name,
-        nomE10 : res.data.table[9].name,*/
-/*
+        nomE10 : res.data.table[9].name,
+
         rankE1 : res.data.table[0].rank,
         rankE2 : res.data.table[1].rank,
         rankE3 : res.data.table[2].rank,
@@ -90,7 +92,7 @@ constructor(props){
 
       }
 
-      this.setState({ Data: NewInfos });*/
+      this.setState({ Data: NewInfos });
 
     })
 
@@ -108,7 +110,7 @@ constructor(props){
 
           <h1>Premier League Widget</h1>
 
-                <button className="region" onSubmit={(e) => { this.updateInfos(e) }}>Boutton</button>
+                <button className="region" onClick={(e) => { this.updateInfos(e) }}>Boutton</button>
               
                 <br/>
                <infoClassement data={this.state.Infos} />
@@ -121,6 +123,6 @@ constructor(props){
 
 export default Classement;
 
-/*
+
 const rootElement8= document.getElementById("root8");
 ReactDOM.render(<Classement/>, rootElement8);*/

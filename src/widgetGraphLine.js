@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import React, { Component } from "react";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer } from 'recharts';
 
 const data = [
     {name: 'April', Income: 3000, Outcome: 1398, amt: 2210},
@@ -32,11 +32,11 @@ export default class GraphLine extends React.Component {
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                <br />
-                <div id="Button"></div>
+                <br/>
+                 <div id="Button"></div>
             </div>
           </div>
-
+          <ResponsiveContainer aspect={1.6}>
           <LineChart 
                 width={500}
                 height={350}
@@ -53,6 +53,7 @@ export default class GraphLine extends React.Component {
                 <Line type="monotone" dataKey="Outcome" stroke="#8884d8" activeDot={{ r: 8 }} />
                 <Line type="monotone" dataKey="Income" stroke="#82ca9d" />
                 </LineChart>
+          </ResponsiveContainer>
           </div>
         </div>
 

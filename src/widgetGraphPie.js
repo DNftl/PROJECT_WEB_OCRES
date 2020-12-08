@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import React, { Component } from "react";
-import { RadialBarChart, RadialBar, Legend } from 'recharts';
+import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts';
 
 
 const data = [
@@ -34,14 +34,16 @@ export default class GraphPie extends React.Component {
               </div>
 
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                  <div id="Button"></div>
+              <div id="Button"></div>
               </div>
-            </div>
-
+            
+              <ResponsiveContainer aspect={1.6}>
             <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={10} outerRadius={110} barSize={15} data={data}>
               <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="uv" />
               <Legend iconSize={15} width={200} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
             </RadialBarChart>
+            </ResponsiveContainer>
+            </div>
           </div>
         </div>
       </div>

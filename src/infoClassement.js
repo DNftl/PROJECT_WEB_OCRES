@@ -8,6 +8,7 @@ export default function infoClassement(props) {
             nomE3,rankE3, winE3, nullE3, lostE3, 
             nomE4,rankE4, winE4, nullE4, lostE4,
             nomE5,rankE5, winE5, nullE5, lostE5, 
+            nomE6,rankE6, winE6, nullE6, lostE6, 
             nomE7,rankE7, winE7, nullE7, lostE7, 
             nomE8,rankE8, winE8, nullE8, lostE8, 
             nomE9,rankE9, winE9, nullE9, lostE9, 

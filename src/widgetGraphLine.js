@@ -2,6 +2,8 @@ import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer } from 'recharts';
 
+import Button from './components/Button';
+
 const data = [
     {name: 'April', Income: 3000, Outcome: 1398, amt: 2210},
     {name: 'May', Income: 2000, Outcome: 9800, amt: 2290},
@@ -11,6 +13,8 @@ const data = [
     {name: 'Sept', Income: 3000, Outcome: 3200, amt: 2300},
     {name: 'Oct', Income: 3490, Outcome: 4300, amt: 2100},
 ];
+
+
 
 
 //création du graphique
@@ -33,9 +37,10 @@ export default class GraphLine extends React.Component {
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <br/>
-                 <div id="Button"></div>
+                 <Button/>
             </div>
           </div>
+
           <ResponsiveContainer aspect={1.6}>
           <LineChart 
                 width={500}
@@ -64,7 +69,7 @@ export default class GraphLine extends React.Component {
 }
 
 
-const rootElement4= document.getElementById("root4");
-ReactDOM.render(<GraphLine />, rootElement4);
+//const rootElement4= document.getElementById("root4");
+//ReactDOM.render(<GraphLine />, rootElement4);
 
 //ReactDOM.render(<GraphLine />, document.getElementById('root'));

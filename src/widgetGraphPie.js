@@ -52,5 +52,5 @@ export default class GraphPie extends React.Component {
   }
 }
 
-const rootElement5= document.getElementById("root5");
-ReactDOM.render(<GraphPie />, rootElement5);
+//const rootElement5= document.getElementById("root5");
+//ReactDOM.render(<GraphPie />, rootElement5);

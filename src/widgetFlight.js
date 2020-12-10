@@ -68,5 +68,5 @@ class Flight extends React.Component {
 
 export default Flight;
 
-const rootElement2= document.getElementById("root2");
-ReactDOM.render(<Flight/>, rootElement2);
+//const rootElement2= document.getElementById("root2");
+//ReactDOM.render(<Flight/>, rootElement2);

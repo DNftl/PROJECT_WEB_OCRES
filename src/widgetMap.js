@@ -134,8 +134,8 @@ export default GoogleApiWrapper({
   apiKey: ("AIzaSyC5T3dtVFl_jnQL-trDgKfb2GZhPrAazTM")
 })(MapContainer)*/
 
-const rootElement7= document.getElementById("root7");
-ReactDOM.render(<MapGoogle/>, rootElement7);
+//const rootElement7= document.getElementById("root7");
+//ReactDOM.render(<MapGoogle/>, rootElement7);
 
 
 

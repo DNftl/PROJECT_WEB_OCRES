@@ -127,5 +127,5 @@ class Meteo extends React.Component {
 
 export default Meteo;
 
-const rootElement1= document.getElementById("root1");
-ReactDOM.render(<Meteo/>, rootElement1);
+//const rootElement1= document.getElementById("root1");
+//ReactDOM.render(<Meteo/>, rootElement1);

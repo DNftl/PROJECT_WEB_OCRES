@@ -115,5 +115,5 @@ class Journal extends React.Component {
 
 export default Journal;
 
-const rootElement6= document.getElementById("root6");
-ReactDOM.render(<Journal/>, rootElement6);
+//const rootElement6= document.getElementById("root6");
+//ReactDOM.render(<Journal/>, rootElement6);

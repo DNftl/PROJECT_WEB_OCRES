@@ -82,5 +82,5 @@ class Pays extends React.Component {
 
 export default Pays;
 
-const rootElement2= document.getElementById("root2");
-ReactDOM.render(<Pays/>, rootElement2);
+//const rootElement2= document.getElementById("root2");
+//ReactDOM.render(<Pays/>, rootElement2);

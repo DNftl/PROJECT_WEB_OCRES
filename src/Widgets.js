@@ -1,41 +1,51 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 //importation pour storybook
-import {BrowserRouter} from 'react-router-dom';
-
-import WidgetMeteo from './components/WidgetMeteo';
 //import Input from './components/Input';
 
-import reportWebVitals from './reportWebVitals';
 import Meteo from "./widgetMeteo.js";
-import infoMeteo from './infoMeteo.js';
 
 import Pays from './widgetPays.js';
-import infoPays from './infoPays.js';
 
 import ResultsMatch from './widgetResultsMatch.js';
-import infoMatch from './infoMatch.js';
-
-import Boutton from './App.js';
 
 import GraphLine from './widgetGraphLine.js';
 import GraphPie from './widgetGraphPie.js';
 
 import Journal from './widgetJournal.js';
-import infoJournal from './infoJournal.js';
-
-import StandingFoot from './widgetStandingFoot.js';
-import infoClassement from './infoClassement.js';
 
 import MapContainer from './widgetMap';
+import axios from 'axios';
+import {useState, useEffect } from 'react'
 
 export default()=> {
+    
+    
+    const [channels, setChannels] = useState([]) 
+    useEffect( () => {
+    const fetch = async () => {
+    const {data: channels} = await axios.get('http://localhost:3001/graphLine')
+      setChannels(channels)
+    }
+    fetch()
+  
+    }, [])
+    
+    
+
     return(
     <>
+
+    <ul>
+      { channels.map( (channel, i) => (
+        <li key={i} >
+          {channel.month}
+        </li>
+      ))}
+    </ul>
 
     <div class="row">          
     

@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer } from 'recharts';
 
 import Button from './components/Button';
+import { useState } from "react";
+import axios from "axios";
 
 const data = [
     {name: 'April', Income: 3000, Outcome: 1398, amt: 2210},
@@ -21,6 +23,19 @@ const data = [
 export default class GraphLine extends React.Component {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
 
+  //ICI 11/12 J'AI AJOUTE
+  /*const graphLine = useState([])
+  useEffect( () -> 
+
+      const fetch = async () -> {
+        const {data: graphLine} = await Axios.get('http://localhost:3001/graphLine')
+        setgraphLine(graphLine)
+      }
+      fetch()
+  )
+
+  */
+  
   render() {
     return (
 

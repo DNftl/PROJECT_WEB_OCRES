@@ -36,7 +36,7 @@ class DashboardAdmin extends React.Component
         return(
             <div>
                 <div>
-                    <h1>Ajouter un devoir</h1>
+                    <h1>GraphPie</h1>
                     <p>Nom : </p>
                     <input type="text" className="textwidgetcenter" value = {this.state.name} onChange={(e)=>this.upName(e)} ></input>
                     <p>Jour: </p>
@@ -50,9 +50,6 @@ class DashboardAdmin extends React.Component
                 <Link to ="/">Dashboard</Link>
            
             </div>
-
-                        
-
         );
     }
 }

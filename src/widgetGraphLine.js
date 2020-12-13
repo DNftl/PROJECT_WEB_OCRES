@@ -6,6 +6,8 @@ import Button from './components/Button';
 import { useState } from "react";
 import axios from "axios";
 
+
+
 const data = [
     {name: 'April', Income: 3000, Outcome: 1398, amt: 2210},
     {name: 'May', Income: 2000, Outcome: 9800, amt: 2290},
@@ -23,21 +25,68 @@ const data = [
 export default class GraphLine extends React.Component {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
 
-  //ICI 11/12 J'AI AJOUTE
-  /*const graphLine = useState([])
-  useEffect( () -> 
+  //ICI 13/12 J'AI AJOUTE
+/*
+  state = {
+    month: '',
+    income: '',
+    outcome: '',
+    body: '',
+    posts: []
+  };
 
-      const fetch = async () -> {
-        const {data: graphLine} = await Axios.get('http://localhost:3001/graphLine')
-        setgraphLine(graphLine)
-      }
-      fetch()
-  )
+  componentDidMount = () => {
+    this.getBlogPost();
+  };
+
+  getBlogPost = () => {
+    axios.get('http://localhost:3001/graphLine')
+    .then((response) => {
+      const data = response.data;
+      this.setState({ posts: data});
+      console.log('TIFF DATA  RECUP');
+    })
+
+    .catch(() => {
+      alert('TIFF Message d erreur db pas recup');
+    });
+  }
+
+  submit = (event) => {
+    event.preventDefault();
+
+    const payload = {
+      month: this.state.month,
+      income: this.state.income,
+      outcome: this.state.outcome,
+      body: this.state.body
+    };
+
+
+    axios({
+      url: 'http://localhost:3001/graphLine',
+      method: 'POST',
+      data: payload
+    })
+      .then(() => {
+        console.log('TIFF les donnees ont bien ete envoye au serveur');
+        this.resetUserInputs();
+        this.getBlogPost();
+      })
+      .catch(() => {
+        console.log('TIFF donnees pas envoyees au serveur bouhh');
+      });;
+  };
 
   */
-  
+
+
   render() {
+
+    //console.log('TIFF ICI State: ', this.state);
+
     return (
+      
 
       <div className="App">
         <div className="container-fluid">

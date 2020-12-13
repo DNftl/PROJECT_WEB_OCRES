@@ -22,8 +22,7 @@ import axios from 'axios';
 import {useState, useEffect } from 'react'
 
 export default()=> {
-    
-    
+        
     const [channels, setChannels] = useState([]) 
     useEffect( () => {
     const fetch = async () => {
@@ -33,8 +32,6 @@ export default()=> {
     fetch()
   
     }, [])
-    
-    
 
     return(
     <>

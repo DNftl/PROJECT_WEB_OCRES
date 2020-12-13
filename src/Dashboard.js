@@ -1,5 +1,3 @@
-// 08/12/2020 AVANT IL N'Y' AVAIT RIEN -->
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 

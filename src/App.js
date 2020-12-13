@@ -59,12 +59,7 @@ export default()=> {
     </div>
     
     </>
-
-
   );
-
-
-
 }
 
 */

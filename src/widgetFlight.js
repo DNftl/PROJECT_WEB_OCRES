@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Axios from "axios";
 import InfoFLight from './infoFlight.js';
 
-const api_key = "d1b0413e0c2796035b1690b30fd92d029";
+//const api_key = "d1b0413e0c2796035b1690b30fd92d029";
 
 
 //https://api.aviationstack.com/v1/Orly?access_key=1b0413e0c2796035b1690b30fd92d029
@@ -16,8 +16,6 @@ class Flight extends React.Component {
     flight: {},
     airportInput: ""
   }
-
-
 
   changeAirport = (value) => {
     this.setState({ airportInput: value })
@@ -49,16 +47,14 @@ class Flight extends React.Component {
       <div className="App">
                 <br/>
         <div className="container-fluid">
-        <div className="borderWidg">
+          <div className="borderWidg">
 
-          <h1>Info Flight :</h1>
+            <h1>Info Flight :</h1>
+              <form className="" onSubmit={(e) => { this.changeLocationAirport(e) }}>
+                <input type="text" className="regioninput" placeholder="Select your region" onChange={(e) => { this.changeAirport(e.target.value) }} />
+              </form>
 
-              
-                <form className="" onSubmit={(e) => { this.changeLocationAirport(e) }}>
-                  <input type="text" className="regioninput" placeholder="Select your region" onChange={(e) => { this.changeAirport(e.target.value) }} />
-                  </form>
-
-                <InfoFLight flight={this.state.flight} />   
+            <InfoFLight flight={this.state.flight} />   
           </div>
         </div>
       </div>

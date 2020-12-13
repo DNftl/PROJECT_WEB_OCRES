@@ -5,27 +5,18 @@ import Axios from "axios";
 //import React from 'react';
 import InfoMeteo from './infoMeteo.js';
 
-
-
 const api_key = "4081444b7b90198136fefe6ed4ccf35b";
 //6a899154a031cb42971d850ed003d5a9
 const api_url = "https://api.openweathermap.org/data/2.5/weather";
 const api_url_icon = "http://openweathermap.org/img/wn/";
 
-
 //https://api.openweathermap.org/data/2.5/weather?q=paris&units=metric&appid=4081444b7b90198136fefe6ed4ccf35b
 //https://api.openweathermap.org/data/2.5/weather?q=paris&units=metric&appid=4081444b7b90198136fefe6ed4ccf35b
 //http://api.weatherstack.com/current?access_key=79b7f4046fe000ff33873b0824b2a65f&query=New%20York
 
-
-
 //http://openweathermap.org/img/wn/10d@2x.png
 
-
-
 class Meteo extends React.Component {
-
-  //state
   state = {
 
     weather: {},
@@ -105,20 +96,20 @@ class Meteo extends React.Component {
         <br/>
         <div className="container-fluid">
         
-        <div className="borderWidg">
-          <h1 className="textwidgetcenter3">Weather Widget</h1>
-          <br/>
+          <div className="borderWidg">
+            <h1 className="textwidgetcenter3">Weather Widget</h1>
+            <br/>
 
-                <form className="region" onSubmit={(e) => { this.changeLocationNewAPI(e) }}>
+              <form className="region" onSubmit={(e) => { this.changeLocationNewAPI(e) }}>
                 <div class="d-flex justify-content-center">
                   <input type="text" className="textwidgetcenter" placeholder="Enter your city" onChange={(e) => { this.changeRegion(e.target.value) }} />
                 </div>
-                </form>
+              </form>
 
-                {/*<button id="city-input-button" type="submit" onClick={(e) => { this.changeIcon(e) }}>afficher</button>*/}
+              {/*<button id="city-input-button" type="submit" onClick={(e) => { this.changeIcon(e) }}>afficher</button>*/}
 
-                <InfoMeteo weather={this.state.weather} />    
-              </div>
+              <InfoMeteo weather={this.state.weather} />    
+          </div>
         </div>
       </div>
     );

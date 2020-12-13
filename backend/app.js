@@ -7,6 +7,7 @@ const cors = require('cors')
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var graphLineRouter = require("./routes/graphLine");
+var graphPieRouter = require("./routes/graphPie");
 
 var app = express();
 
@@ -30,9 +31,7 @@ app.use(cors())
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/graphLine", graphLineRouter);
+app.use("/graphPie", graphPieRouter);
 
 
 module.exports = app;
-
-
-

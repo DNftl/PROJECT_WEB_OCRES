@@ -8,8 +8,6 @@ const api_url = "http://newsapi.org/v2/everything?q=apple";
 //http://newsapi.org/v2/everything?q=apple&from=2020-11-25&to=2020-12-04&sortBy=popularity&apiKey=dbc63e97842c4cb5bbb0bae315c289f4
 
 class Journal extends React.Component {
-
-  //state
   state = {
 
     dataJ: {},
@@ -82,9 +80,6 @@ class Journal extends React.Component {
     })
   }
 
-  
-
-
   render() 
   {
     return (
@@ -92,21 +87,21 @@ class Journal extends React.Component {
         <br/>
         <div className="container-fluid">
         
-        <div className="borderWidg">
-          <h1 className="textwidgetcenter3">Journal Widget</h1>
-          <br />
+          <div className="borderWidg">
+            <h1 className="textwidgetcenter3">Journal Widget</h1>
+            <br />
 
-                <form className="region" onSubmit={(e) => { this.changeLocationNewAPI(e) }}>
-                <div class="d-flex justify-content-center">
-                  <input type="text" className="textwidgetcenter" placeholder="Enter a date ex : 2020-11-22" onChange={(e) => { this.changeRegion(e.target.value) }} />
-                </div>
-                </form>
-                <br/><br/>
-                
-                <InfoJournal inf={this.state.dataJ} />  
-                <button className="boutonAutre" id="city-input-button" type="submit" onClick={(e) => { this.autresArticles(e) }}>Random</button>
-              </div>
-              <br/>
+                  <form className="region" onSubmit={(e) => { this.changeLocationNewAPI(e) }}>
+                    <div class="d-flex justify-content-center">
+                      <input type="text" className="textwidgetcenter" placeholder="Enter a date ex : 2020-11-22" onChange={(e) => { this.changeRegion(e.target.value) }} />
+                    </div>
+                  </form>
+                  <br/><br/>
+                  
+                  <InfoJournal inf={this.state.dataJ} />  
+                  <button className="boutonAutre" id="city-input-button" type="submit" onClick={(e) => { this.autresArticles(e) }}>Random</button>
+            </div>
+            <br/>
         </div>
       </div>
     );

@@ -3,24 +3,19 @@ import React, { Component } from "react";
 import Axios from "axios";
 import InfoPays from './infoPays.js';
 
-const api_key = "d1b0413e0c2796035b1690b30fd92d029";
+//const api_key = "d1b0413e0c2796035b1690b30fd92d029";
 
 //avion
 //https://api.aviationstack.com/v1/Orly?access_key=1b0413e0c2796035b1690b30fd92d029
-
-
 //https://restcountries.eu/rest/v2/name/france?fullText=true
 
-class Pays extends React.Component {
 
-  //state
+class Pays extends React.Component {
   state = {
 
     infopays: {},
     countryInput: ""
   }
-
-
 
   changeAirport = (value) => {
     this.setState({ countryInput: value })
@@ -45,8 +40,7 @@ class Pays extends React.Component {
           currname : res.data[0].currencies[0].name,
           currsymb : res.data[0].currencies[0].symbol,
           drapeau : res.data[0].flag
-          //frontier : res.data[0].borders
-        
+          //frontier : res.data[0].borders 
       }
 
       this.setState({ infopays: newPays });
@@ -59,20 +53,20 @@ class Pays extends React.Component {
   {
     return (
       <div className="App">
-                <br/>
+      <br/>
         <div className="container-fluid">
-        <div className="borderWidg">
-
-          <h1 className="textwidgetcenter3">Country Widget</h1>
-          <br/>
-          
-                <form className="" onSubmit={(e) => { this.changeLocationAirport(e) }}>
+          <div className="borderWidg">
+            <h1 className="textwidgetcenter3">Country Widget</h1>
+            <br/>
+              
+              <form className="" onSubmit={(e) => { this.changeLocationAirport(e) }}>
                 <div class="d-flex justify-content-center">
                   <input type="text" className="textwidgetcenter" placeholder="Enter a country" onChange={(e) => { this.changeAirport(e.target.value) }} />
                 </div>
-                </form>
-                <br/>
-               <InfoPays pa={this.state.infopays} />
+              </form>
+              <br/>
+            
+            <InfoPays pa={this.state.infopays} />
           </div>
         </div>
       </div>

@@ -2,15 +2,14 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import axios from 'axios';
 
-class DashboardAdmin extends React.Component
+class DashboardAdminPie extends React.Component
 {
 
   //13/12 ICI J'AI AJOUTE
 
   state = {
-    month: '',
-    income: '',
-    outcome: '',
+    event: '',
+    budget: '',
     body: '',
     posts: []
   };
@@ -20,36 +19,35 @@ class DashboardAdmin extends React.Component
   };
 
   getBlogPost = () => {
-    axios.get('http://localhost:3001/graphLine')
+    axios.get('http://localhost:3001/graphPie')
     .then((response) => {
       const data = response.data;
-      this.setState({ posts: data});
+      this.setstate({ posts: data});
       console.log('TIFF DATA  RECUP');
     })
 
     .catch(() => {
-      alert('TIFF LINE Message d erreur db pas recup');
+      //alert('TIFF PIE Message d erreur db pas recup');
     });
   }
 
   handleChange = ({ target }) => {
     const { name, value } = target;
-    this.setState({ [name]: value });
+    this.setstate({ [name]: value });
   };
 
   submit = (event) => {
     event.preventDefault();
 
     const payload = {
-      month: this.state.month,
-      income: this.state.income,
-      outcome: this.state.outcome,
+      event: this.state.event,
+      budget: this.state.budget,
       body: this.state.body
     };
 
 
     axios({
-      url: 'http://localhost:3001/graphLine',
+      url: 'http://localhost:3001/graphPie',
       method: 'POST',
       data: payload
     })
@@ -63,13 +61,13 @@ class DashboardAdmin extends React.Component
       });;
   };
 
+
   //FIN DE L'AJOUT 13/12
 
     render()
     {
 
       //TIFF AJOUT ICI
-      console.log('TIFF ICI State: ', this.state);
       console.log('TIFF ICI pour pie state: ', this.state);
 
         return(
@@ -93,17 +91,12 @@ class DashboardAdmin extends React.Component
                       <form onSubmit={this.submit}>
                         <div>
                           <p></p>
-                          <input type="text" className="textwidgetcenter" name="month" placeholder="Month" value={this.state.month} onChange={this.handleChange} />
+                          <input type="text" className="textwidgetcenter" name="event" placeholder="Event" value={this.state.event} onChange={this.handleChange} />
                         </div>
 
                         <div>
                           <p></p>
-                          <input type="text" className="textwidgetcenter" name="income" placeholder="Income" value={this.state.income} onChange={this.handleChange} />
-                        </div>
-
-                        <div>
-                          <p></p>
-                          <input type="text" className="textwidgetcenter" name="outcome" placeholder="Outcome" value={this.state.outcome} onChange={this.handleChange} />
+                          <input type="text" className="textwidgetcenter" name="budget" placeholder="Budget" value={this.state.budget} onChange={this.handleChange} />
                           <p></p>
                         </div>
 
@@ -114,21 +107,16 @@ class DashboardAdmin extends React.Component
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                   <div className="borderWidg">
-                    <h1 className="textwidgetcenter3">Update Data by month</h1>                
+                    <h1 className="textwidgetcenter3">Update Data by event</h1>                
                       <form onSubmit={this.submit}>
                         <div>
                           <p></p>
-                          <input type="text" className="textwidgetcenter" name="month" placeholder="Month" value={this.state.month} onChange={this.handleChange} />
+                          <input type="text" className="textwidgetcenter" name="event" placeholder="Event" value={this.state.event} onChange={this.handleChange} />
                         </div>
 
                         <div>
                           <p></p>
-                          <input type="text" className="textwidgetcenter" name="income" placeholder="Income" value={this.state.income} onChange={this.handleChange} />
-                        </div>
-
-                        <div>
-                          <p></p>
-                          <input type="text" className="textwidgetcenter" name="outcome" placeholder="Outcome" value={this.state.outcome} onChange={this.handleChange} />
+                          <input type="text" className="textwidgetcenter" name="budget" placeholder="Budget" value={this.state.budget} onChange={this.handleChange} />
                           <p></p>
                         </div>
 
@@ -139,14 +127,14 @@ class DashboardAdmin extends React.Component
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                   <div className="borderWidg">
-                    <h1 className="textwidgetcenter3">Delete Data by month</h1>                
+                    <h1 className="textwidgetcenter3">Delete Data by event</h1>                
                       <form onSubmit={this.submit}>
                         <div>
                           <p></p>
-                          <input type="text" className="textwidgetcenter" name="month" placeholder="Month" value={this.state.month} onChange={this.handleChange} />
+                          <input type="text" className="textwidgetcenter" name="event" placeholder="Event" value={this.state.event} onChange={this.handleChange} />
                           <p></p>
                           <button className="boutonAutre">Delete</button>
-                          <p><br/><br/><br/></p>
+                          <p><br/></p>
                         </div>
 
                       </form>
@@ -160,4 +148,4 @@ class DashboardAdmin extends React.Component
     }
 }
 
-export default DashboardAdmin;
+export default DashboardAdminPie;

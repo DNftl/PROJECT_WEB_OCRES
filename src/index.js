@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import Widgets from './Widgets';
 import DashboardAdmin from './DashboardAdmin';
+import DashboardAdminPie from './DashboardAdminPie';
 import Header from './components/Header';
 
 ReactDOM.render(
@@ -21,8 +22,13 @@ ReactDOM.render(
           </Route>
 
           <Route exact path="/formulaire">
-            <Header children ="Formulaire"/>
+            <Header children ="Accounting form"/>
             <DashboardAdmin />
+          </Route>
+
+          <Route exact path="/formulairepie">
+            <Header children ="Budgeting form"/>
+            <DashboardAdminPie />
           </Route>
 
           <Route path ="*">
@@ -42,7 +48,7 @@ ReactDOM.render(
     return(
     <div>
       <h3>
-        404 Page not found
+        404 Page not found ;(
       </h3>
     </div>
     );

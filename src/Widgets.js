@@ -22,7 +22,8 @@ import axios from 'axios';
 import {useState, useEffect } from 'react'
 
 export default()=> {
-        
+     
+    /*
     const [channels, setChannels] = useState([]) 
     useEffect( () => {
     const fetch = async () => {
@@ -33,9 +34,7 @@ export default()=> {
   
     }, [])
 
-    return(
-    <>
-
+    //à mettre juste en-dessous du return
     <ul>
       { channels.map( (channel, i) => (
         <li key={i} >
@@ -43,6 +42,12 @@ export default()=> {
         </li>
       ))}
     </ul>
+
+
+    */
+
+    return(
+    <>
 
     <div class="row">          
     
@@ -100,10 +105,3 @@ export default()=> {
     );
 
 }
-
-    
-    
-    
-    
-    
-    

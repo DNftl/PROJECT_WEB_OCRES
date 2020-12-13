@@ -8,9 +8,7 @@ const api_url = "https://apiv2.apifootball.com/?action=get_events";
 
 //https://apiv2.apifootball.com/?action=get_events&from=2019-04-01&to=2019-04-01&APIkey=523458a0b3a59fb1523e0b735b07893ae95ccae40042bafcc814df82891bcad9&match_date=2019-04-01&country_id=41
 
-
 class Match extends React.Component {
-
 
 constructor(props){
   super(props)
@@ -60,8 +58,6 @@ constructor(props){
         logoHome: res.data[0].team_home_badge,
         logoAway: res.data[0].team_away_badge
 
-
-
         /*nomEquipeHome2: res.data[1].match_hometeam_name,
         nomEquipeExt2: res.data[1].match_awayteam_name,
         nomLigue2: res.data[1].league_name,
@@ -73,9 +69,8 @@ constructor(props){
         buteur11: res.data[0].goalscorer[1].home_scorer,
         
         buteur2: res.data[1].goalscorer[0].home_scorer,
-        buteur22: res.data[1].goalscorer[1].home_scorer,*/
-        
-
+        buteur22: res.data[1].goalscorer[1].home_scorer,
+        */
       }
 
       this.setState({ Infos: NewInfos });
@@ -91,19 +86,16 @@ constructor(props){
       <div className="App">
         <br/>
         <div className="container-fluid">
-        <div className="borderWidg">
+          <div className="borderWidg">
+            <h1 className="textwidgetcenter3">Match Widget</h1>
+            <br />
+              <form className="region" onSubmit={(e) => { this.updateInfos(e) }}>
+                <input type="text" className="textwidgetcenter" placeholder="Enter a date ex : 2020-11-20" onChange={(e) => { this.changeDate(e.target.value) }} />
+              </form>
         
-
-          <h1 className="textwidgetcenter3">Match Widget</h1>
-          <br />
-
-                <form className="region" onSubmit={(e) => { this.updateInfos(e) }}>
-                  <input type="text" className="textwidgetcenter" placeholder="Enter a date ex : 2020-11-20" onChange={(e) => { this.changeDate(e.target.value) }} />
-                </form>
-      
               <br/>
-               <InfoMatch pc={this.state.Infos} />
-        </div>
+            <InfoMatch pc={this.state.Infos} />
+          </div>
         </div>
       </div>
     );

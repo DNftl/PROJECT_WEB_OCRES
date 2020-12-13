@@ -3,11 +3,10 @@ import "./index.css";
 
 export default function InfoJournal(props) {
     
-    const {art1Content, art1Source, art1Title, art1Image, art1Date, art1Description,
-        art2Content, art2Source, art2Title, art2Image, art2Date, art2Description} = props.inf;
+    const {art1Content, art1Source, art1Title, art1Image, art1Date,
+        art2Content, art2Source, art2Title, art2Image, art2Date} = props.inf;
 
     return (
-        
         <div className="user-weather">
 
             <div className="row">

@@ -1,0 +1,14 @@
+[
+    {
+      "event": "Transport", 
+      "budget": "70"
+    },
+    {
+        "event": "Food", 
+        "budget": "300"
+    },
+    {
+        "event": "Restaurant", 
+        "budget": "80"
+    }
+]

@@ -55,5 +55,22 @@ router.put('/:month', async (req, res) => {
   });
 });
 
+//suppression
+router.delete('/:month', async (req, res) => {
+  const income = req.body.income
+  const outcome = req.body.outcome
+
+  if (!outcome || ! income) { 
+    res.send('Il manque un argument')
+  return
+  }
+
+  graphLine.deleteOne({ month : req.params.month}, (err) => {
+    if(err){
+      res.send(err);
+    }
+    res.send("ok");
+  });
+});
 
 module.exports = router;

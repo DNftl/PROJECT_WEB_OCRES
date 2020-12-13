@@ -17,7 +17,7 @@ export default function InfoMeteo(props) {
                 </div>
 
                 <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <p><img className="imageIconMeteo" alt="img" src={icon}></img></p>
+                    
                 </div>
             </div>
 
